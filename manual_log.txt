@@ -1,0 +1,9 @@
+2022.01.24 Created local copy of tutorial repo at my home on UTAH using python -m cookiecutter https://github.com/sdss/python_template.git
+2022.01.24 Edited value in configurations file python/cartons_inventory/etc/cartons_inventory.yml to test it (Ok) but update didn't show until I used
+           pip install . again. The version on my own laptop was automatically updated instead (maybe because folder is added to PYTHONPATH)
+2022.01.24 Changed name of main.py file in python/cartons_inventory/ and line 7 in test_main.py to __main__.py to test "python -i python/cartons_inventory/" (Ok)
+2022.01.24 Added my own functions to __main__.py and cartons.py to check if it worked (Ok)
+2022.01.24 Pushed to cartons repo on my GitHub account with git remote add origin https://github.com/fsantanar/cartons.git and
+           git push origin HEAD:main
+
+
