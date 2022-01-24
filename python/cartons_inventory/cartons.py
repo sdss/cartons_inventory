@@ -1,7 +1,8 @@
 
 
-import numpy
 import os
+
+import numpy
 
 
 def sroot(number):
