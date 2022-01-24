@@ -11,6 +11,9 @@ import operator
 
 __all__ = ('math', 'MyClass')
 
+def myfunction(int_arg, str_arg):
+  res='The string is '+str_arg+' while the integer is '+str(int_arg)
+  return res
 
 def math(arg1, arg2, arith_operator='+'):
     """Performs an arithmetic operation.
