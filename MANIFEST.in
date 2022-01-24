@@ -1,0 +1,2 @@
+recursive-include python/cartons_inventory/etc *
+recursive-include cextern/**/*
