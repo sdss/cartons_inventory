@@ -5,5 +5,5 @@
 2022.01.24 Added my own functions to __main__.py and cartons.py to check if it worked (Ok)
 2022.01.24 Pushed to cartons repo on my GitHub account with git remote add origin https://github.com/fsantanar/cartons.git and
            git push origin HEAD:main
-
-
+2022.01.24 Edited new/modified files to pass flake8 test and also edited original and new/modified files to pass isort test
+2022.01.31 Created first running version of cartons.py following flake8 rules, and created first version of file cartons_v05_information.csv with output
