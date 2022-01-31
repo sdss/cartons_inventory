@@ -7,3 +7,4 @@
            git push origin HEAD:main
 2022.01.24 Edited new/modified files to pass flake8 test and also edited original and new/modified files to pass isort test
 2022.01.31 Created first running version of cartons.py following flake8 rules, and created first version of file cartons_v05_information.csv with output
+2022.01.31 Edited carton_list file to add new version of carton bhm_colr_galaxies_lsdr8 that fixes magnitudes problem
