@@ -20,11 +20,10 @@ def get_range(set_p):
 
 
 def set_or_none(list_l):
-    """Function to avoid list->set transformation to return set={None}."""
-    if list_l == [None]:
+    """Function to avoid list->set transformation to return set={None} or set={}."""
+    res = set(list_l)
+    if res == {None} or res == {}:
         res = None
-    else:
-        res = set(list_l)
     return res
 
 
@@ -51,7 +50,7 @@ def check_mag_outliers(datafr, bands, systems):
             Numbers: For values brighter than -9, dimmer than 50, or equal to zero. In this cases
             the number itself is returned as the outlier type.
        For example if a carton contains stars with g=-99.9, r=-99.9, j=None, and bp=Inf.
-       This function will return [{'SDSS_-99.9','TMASS_None','GAIA_Invalid'}]
+       This function will return {'SDSS_-99.9','TMASS_None','GAIA_Invalid'}
 
     """
     out_bands, out_systems = [], []
@@ -70,8 +69,8 @@ def check_mag_outliers(datafr, bands, systems):
         n_out = len(out_band)
         out_bands = out_bands + out_band
         out_systems = out_systems + [systems[ind_band]] * n_out
-    outs_set = set([out_systems[idx] + '_' + out_bands[idx] for idx in range(len(out_bands))])
-    return outs_set
+    out = set_or_none([out_systems[idx] + '_' + out_bands[idx] for idx in range(len(out_bands))])
+    return out
 
 
 def gets_carton_list_file_info(carton_list_filename, header_length=2, delimiter='|'):
@@ -166,7 +165,7 @@ def analyze_carton_query(carton_df):
     set_names = cfg['db_fields']['sets']
     set_range_names = cfg['db_fields']['set_ranges']
     for set_name in set_names:
-        locals()[set_name] = set(carton_df[set_name])
+        locals()[set_name] = set_or_none(carton_df[set_name])
     for set_name in set_range_names:
         locals()[set_name + '_min'], locals()[set_name + '_max'] = get_range(locals()[set_name])
     carton_parameter_names = cfg['db_fields']['carton_dependent']
@@ -224,7 +223,7 @@ def write_csv(inputname='', outputname='', onlydo=False, delim='|'):
         outputname = filenames['output_name']
     cartons, plans, tags = gets_carton_list_file_info(carton_list_filename=inputname)
     if onlydo:
-        cartons, plans, tags = cartons[:onlydo], plans[:onlydo], tags[:onlydo]
+        cartons, plans, tags = cartons[onlydo], plans[onlydo], tags[onlydo]
     f = open(outputname, 'w')
     writer = csv.writer(f, delimiter=delim)
     file_header = create_header(cfg)
