@@ -423,8 +423,8 @@ def check_mag_outliers(datafr, bands, systems):
         infinite values), and <<Number>> (For values brighter than -9, dimmer than 50,
         or equal to zero), in the latter cases the number itself is returned as the outlier type.
 
-        For example if a carton contains stars with g=-99.9, r=-99.9, j=None, and bp=Inf.
-        This function will return {'SDSS\_-99.9', 'TMASS_None', 'GAIA_Invalid}.
+        For example if a carton contains stars with h=999.9, k=999.9, j=None, and bp=Inf.
+        This function will return {'TMASS_999.9', 'TMASS_None', 'GAIA_Invalid}.
 
 
     """
