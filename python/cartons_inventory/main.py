@@ -9,13 +9,23 @@
 import operator
 
 
-__all__ = ('math', 'MyClass')
+__all__ = ('get_range','set_or_none','math', 'MyClass')
+
+def get_range(set_p):
+    """Gets the total range of a given set."""
+    if set_p is None:
+        minp, maxp = None, None
+    else:
+        minp, maxp = min(list(set_p)), max(list(set_p))
+    return minp, maxp
 
 
-def myfunction(int_arg, str_arg):
-    res = 'The string is ' + str_arg + ' while the integer is ' + str(int_arg)
+def set_or_none(list_l):
+    """Function to avoid list->set transformation to return set={None} or set={}."""
+    res = set(list_l)
+    if res == {None} or res == {} or res==set():
+        res = None
     return res
-
 
 def math(arg1, arg2, arith_operator='+'):
     """Performs an arithmetic operation.

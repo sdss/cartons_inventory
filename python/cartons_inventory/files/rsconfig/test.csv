@@ -1,0 +1,11 @@
+carton|plan|category_label|stage|active|program|version_pk|tag|mapper_pk|mapper_label|category_pk|cadence_pk|cadence_label|lambda_eff|instrument_pk|instrument_label|value_min|value_max|priority_min|priority_max
+bhm_aqmes_bonus_bright|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{10}|{'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|0.1|0.1|4040|4041
+bhm_aqmes_bonus_core|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.2|0.2|3300|3301
+bhm_aqmes_bonus_faint|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.1|0.1|3302|3303
+bhm_aqmes_med|0.5.0|science|srd|y|bhm_aqmes|83|0.3.0|1|BHM|0|{42}|{'dark_10x4_4yr'}|{5400.0}|{0}|{'BOSS'}|100.0|100.0|1100|1101
+bhm_aqmes_med_faint|0.5.0|science|srd|y|bhm_filler|83|0.3.0|1|BHM|0|{42}|{'dark_10x4_4yr'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|3100|3101
+bhm_aqmes_wide2|0.5.4|science|srd|y|bhm_aqmes|96|0.3.5|1|BHM|0|{36}|{'dark_2x4'}|{5400.0}|{0}|{'BOSS'}|100.0|100.0|1210|1211
+bhm_aqmes_wide2_faint|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{36}|{'dark_2x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|3210|3211
+bhm_csc_apogee|0.5.15|science|srd|y|bhm_csc|113|0.3.14|1|BHM|0|{1, 10}|{'bright_1x1', 'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|2930|2939
+bhm_csc_boss|0.5.15|science|srd|y|bhm_csc|113|0.3.14|1|BHM|0|{33, 1, 31}|{'dark_1x4', 'bright_1x1', 'dark_1x2'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1920|2939
+bhm_csc_boss_bright|0.5.0|science|srd|n|bhm_csc|83|0.3.0|1|BHM|0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|2920|2921

@@ -1,36 +1,12 @@
 ---
 
-filenames:
-    input_name: '../../carton_list_2022.01.31.txt'
-    output_name: 'cartons_v05_information.csv'
-
 db_fields:
     sets: ['value','priority','cadence_pk','cadence_label',
            'lambda_eff','instrument_pk','instrument_label']
     set_ranges: ['value','priority']
-    carton_dependent: ['carton','program','version','plan','tag','mapper_pk',
-                       'mapper_label','category_pk','category_label']
-column_names:
-    carton: 'carton'
-    program: 'program'
-    version: 'version_pk'
-    plan: 'plan'
-    tag: 'tag'
-    mapper_pk: 'mapper_pk'
-    mapper_label: 'mapper_label'
-    category_pk: 'category_pk'
-    category_label: 'category_label'
-    value: 'value'
-    value_min: 'value_min'
-    value_max: 'value_max'
-    priority_min: 'priority_min'
-    priority_max: 'priority_max'
-    cadence_pk: 'cadence_pk'
-    cadence_label: 'cadence_label'
-    lambda_eff: 'lambda_eff'
-    instrument_pk: 'instrument_pk'
-    instrument_label: 'instrument_label'
-    magnitude_placeholders_list: 'magnitude_placeholder'
+    carton_dependent: ['program','version_pk','tag','mapper_pk',
+                       'mapper_label','category_pk']
+    input_dependent: ['plan', 'category_label', 'stage', 'active']
 
 bands:
     SDSS: ['g','r','i','z']

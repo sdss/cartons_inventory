@@ -1,0 +1,149 @@
+carton|plan|category_label|stage|active|program|version_pk|tag|mapper_pk|mapper_label|category_pk|cadence_pk|cadence_label|lambda_eff|instrument_pk|instrument_label|value_min|value_max|priority_min|priority_max
+bhm_aqmes_bonus_bright|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{10}|{'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|0.1|0.1|4040|4041
+bhm_aqmes_bonus_core|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.2|0.2|3300|3301
+bhm_aqmes_bonus_faint|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.1|0.1|3302|3303
+bhm_aqmes_med|0.5.0|science|srd|y|bhm_aqmes|83|0.3.0|1|BHM|0|{42}|{'dark_10x4_4yr'}|{5400.0}|{0}|{'BOSS'}|100.0|100.0|1100|1101
+bhm_aqmes_med_faint|0.5.0|science|srd|y|bhm_filler|83|0.3.0|1|BHM|0|{42}|{'dark_10x4_4yr'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|3100|3101
+bhm_aqmes_wide2|0.5.4|science|srd|y|bhm_aqmes|96|0.3.5|1|BHM|0|{36}|{'dark_2x4'}|{5400.0}|{0}|{'BOSS'}|100.0|100.0|1210|1211
+bhm_aqmes_wide2_faint|0.5.4|science|srd|y|bhm_filler|96|0.3.5|1|BHM|0|{36}|{'dark_2x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|3210|3211
+bhm_csc_apogee|0.5.15|science|srd|y|bhm_csc|113|0.3.14|1|BHM|0|{1, 10}|{'bright_3x1', 'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|2930|2939
+bhm_csc_boss|0.5.15|science|srd|y|bhm_csc|113|0.3.14|1|BHM|0|{33, 1, 31}|{'dark_1x2', 'dark_1x4', 'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1920|2939
+bhm_csc_boss_bright|0.5.0|science|srd|n|bhm_csc|83|0.3.0|1|BHM|0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|2920|2921
+bhm_csc_boss_dark|0.5.0|science|srd|n|bhm_csc|83|0.3.0|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1920|1921
+bhm_colr_galaxies_lsdr8|0.5.16|science|filler|y|bhm_filler|114|0.3.15|1|BHM|0|{1, 30, 33}|{'dark_1x4', 'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|7100|7100
+bhm_gua_bright|0.5.0|science|srd|y|bhm_filler|83|0.3.0|1|BHM|0|{9}|{'bright_2x1'}|{5400.0}|{0}|{'BOSS'}|0.5|0.5|4040|4040
+bhm_gua_dark|0.5.0|science|srd|y|bhm_filler|83|0.3.0|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.5|0.5|3400|3400
+bhm_rm_ancillary|0.5.0|science|srd|y|bhm_rm|83|0.3.0|1|BHM|0|{40}|{'dark_174x8'}|{5400.0}|{0}|{'BOSS'}|1000.0|1000.0|904|1049
+bhm_rm_core|0.5.0|science|srd|y|bhm_rm|83|0.3.0|1|BHM|0|{40, 41}|{'dark_174x8', 'dark_100x8'}|{5400.0}|{0}|{'BOSS'}|1000.0|1000.0|907|1047
+bhm_rm_known_spec|0.5.0|science|srd|y|bhm_rm|83|0.3.0|1|BHM|0|{40, 41}|{'dark_174x8', 'dark_100x8'}|{5400.0}|{0}|{'BOSS'}|1000.0|1000.0|901|1051
+bhm_rm_var|0.5.0|science|srd|y|bhm_rm|83|0.3.0|1|BHM|0|{40}|{'dark_174x8'}|{5400.0}|{0}|{'BOSS'}|1000.0|1000.0|908|1038
+bhm_spiders_agn_efeds_stragglers|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1510|1714
+bhm_spiders_agn_gaiadr2|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.0|1.0|1540|3742
+bhm_spiders_agn_lsdr8|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1520|1723
+bhm_spiders_agn_ps1dr2|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x4', 'dark_1x2'}|{5400.0}|{0}|{'BOSS'}|0.0|1.0|1530|3732
+bhm_spiders_agn_sep|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|1510|1512
+bhm_spiders_agn_skymapperdr2|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{9, 33, 31}|{'bright_2x1', 'dark_1x4', 'dark_1x2'}|{5400.0}|{0}|{'BOSS'}|0.0|1.0|1550|3752
+bhm_spiders_agn_supercosmos|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.0|1.0|1560|3763
+bhm_spiders_clusters_efeds_stragglers|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 31}|{'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|5.0|1500|1629
+bhm_spiders_clusters_lsdr8|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|5.0|1501|1659
+bhm_spiders_clusters_ps1dr2|0.5.0|science|srd|y|bhm_spiders|83|0.3.0|1|BHM|0|{33, 9, 31}|{'bright_2x1', 'dark_1x2', 'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|1.0|5.0|1502|1689
+manual_bhm_spiders_comm|0.5.3|science|none|n|commissioning|95|0.3.4|1|BHM|0|{33}|{'dark_1x4'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|1000|1010
+manual_bright_target_offsets_1|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_target_offsets_1_g13|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_target_offsets_2|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_target_offsets_2_g13|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_1|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_2|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_3|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_4|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_5|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_6|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_bright_targets_g13_offset_fixed_7|0.5.3|science|none|n|commissioning|95|0.3.4|0|MWM|0||||||0.0|0.0|6080|6080
+manual_fps_position_stars|0.5.3|science|none|n|commissioning|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+manual_nsbh_apogee|0.5.3|science|srd|y|mwm_cb|95|0.3.4|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|1400|1400
+manual_nsbh_boss|0.5.3|science|srd|y|mwm_cb|95|0.3.4|0|MWM|0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|1400|1400
+manual_mwm_tess_ob|0.5.13|science|srd|y|mwm_tessob|111|0.3.12|0|MWM|0|{18, 19, 20}|{'bright_8x4', 'bright_8x1', 'bright_8x2'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|1000|1000
+mwm_cb_300pc_apogee|0.5.19|science|srd|y|mwm_cb|117|0.3.18|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|1400|1400
+mwm_cb_300pc_boss|0.5.19|science|srd|y|mwm_cb|117|0.3.18|0|MWM|0|{9, 34}|{'bright_2x1', 'dark_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1400|1400
+mwm_cb_cvcandidates_apogee|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|1400|1400
+mwm_cb_cvcandidates_boss|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{9, 34}|{'bright_2x1', 'dark_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1400|1400
+mwm_cb_gaiagalex_apogee|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|1400|1400
+mwm_cb_gaiagalex_boss|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{9, 34}|{'bright_2x1', 'dark_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1400|1400
+mwm_cb_uvex1|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1400|1400
+mwm_cb_uvex2|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1400|1400
+mwm_cb_uvex3|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1400|1400
+mwm_cb_uvex4|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1400|1400
+mwm_cb_uvex5|0.5.0|science|srd|y|mwm_cb|83|0.3.0|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|1400|1400
+mwm_dust_core|0.5.0|science|srd|y|mwm_dust|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|2720|2720
+mwm_erosita_compact_gen|0.5.2|science|srd|y|mwm_erosita|93|0.3.3|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1910|2400
+mwm_erosita_compact_var|0.5.2|science|srd|y|mwm_erosita|93|0.3.3|0|MWM|0|{32, 1, 31}|{'dark_1x2', 'bright_1x1', 'dark_1x3'}|{5400.0}|{0}|{'BOSS'}|1.0|3.0|1900|2400
+mwm_erosita_stars|0.5.2|science|srd|y|mwm_erosita|93|0.3.3|0|MWM|0|{1, 31}|{'dark_1x2', 'bright_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|1.0|2.0|1920|2400
+mwm_galactic_core|0.5.0|science|srd|y|mwm_galactic|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|2710|2710
+mwm_legacy_ir2opt|0.5.0|science|srd|y|mwm_legacy|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|1.0|1.0|6100|6100
+mwm_ob_cepheids|0.5.1|science|srd|y|mwm_ob|92|0.3.2|0|MWM|0|{10}|{'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|3.0|2910|2910
+mwm_ob_core|0.5.1|science|srd|y|mwm_ob|92|0.3.2|0|MWM|0|{10}|{'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|3.0|2910|2910
+mwm_rv_long_fps|0.5.18|science|srd|y|mwm_rv|116|0.3.17|0|MWM|0|{15, 16, 21, 22, 24, 25, 27, 28}|{'bright_12x1', 'bright_6x2', 'bright_6x1', 'bright_12x2', 'bright_9x2', 'bright_15x1', 'bright_15x2', 'bright_9x1'}|{16000.0}|{1}|{'APOGEE'}|6.0|30.0|2510|2540
+mwm_rv_short_fps|0.5.18|science|srd|y|mwm_rv|116|0.3.17|0|MWM|0|{39}|{'bright_18x1'}|{16000.0}|{1}|{'APOGEE'}|18.0|18.0|2515|2545
+mwm_snc_100pc_apogee|0.5.0|science|srd|y|mwm_snc|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|1805|1805
+mwm_snc_100pc_boss|0.5.0|science|srd|y|mwm_snc|83|0.3.0|0|MWM|0|{9, 34}|{'bright_2x1', 'dark_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1800|1800
+mwm_snc_250pc_apogee|0.5.0|science|srd|y|mwm_snc|83|0.3.0|0|MWM|0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|1.0|1.0|1815|1815
+mwm_snc_250pc_boss|0.5.0|science|srd|y|mwm_snc|83|0.3.0|0|MWM|0|{9}|{'bright_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1810|1810
+mwm_tess_ob|0.5.11|science|srd|n|mwm_tessob|109|0.3.10|0|MWM|0|{18, 19, 20}|{'bright_8x4', 'bright_8x1', 'bright_8x2'}|{16000.0}|{1}|{'APOGEE'}|8.0|32.0|2200|2200
+mwm_tess_planet|0.5.0|science|srd|y|mwm_planet|83|0.3.0|0|MWM|0|{1, 2, 3, 4, 5, 6}|{'bright_1x2', 'bright_1x3', 'bright_1x4', 'bright_1x6', 'bright_1x1', 'bright_1x5'}|{16000.0}|{1}|{'APOGEE'}|1.0|6.0|2600|2610
+mwm_tessrgb_core|0.5.0|science|srd|y|mwm_tessrgb|83|0.3.0|0|MWM|0|{1, 2, 3, 4, 5, 6}|{'bright_1x2', 'bright_1x3', 'bright_1x4', 'bright_1x6', 'bright_1x1', 'bright_1x5'}|{16000.0}|{1}|{'APOGEE'}|1.0|6.0|2800|2800
+mwm_wd_core|0.5.0|science|srd|y|mwm_wd|83|0.3.0|0|MWM|0|{34}|{'dark_2x1'}|{5400.0}|{0}|{'BOSS'}|2.0|2.0|1400|1400
+mwm_yso_cluster_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_cluster_boss|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10, 13, 14, 15}|{'bright_4x1', 'bright_5x1', 'bright_6x1', 'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|6.0|2705|2705
+mwm_yso_cmz_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_disk_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_disk_boss|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10, 13, 14, 15}|{'bright_4x1', 'bright_5x1', 'bright_6x1', 'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|6.0|2705|2705
+mwm_yso_embedded_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_nebula_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_ob_apogee|0.5.0|science|srd|n|mwm_yso|83|0.3.0|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2700|2700
+mwm_yso_ob_boss|0.5.0|science|srd|n|mwm_yso|83|0.3.0|0|MWM|0|{10}|{'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|3.0|2700|2700
+mwm_yso_pms_apogee|0.5.1|science|srd|y|mwm_yso|92|0.3.2|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2700|2700
+mwm_yso_pms_boss|0.5.1|science|srd|y|mwm_yso|92|0.3.2|0|MWM|0|{10, 13, 14, 15}|{'bright_4x1', 'bright_5x1', 'bright_6x1', 'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|6.0|2700|2700
+mwm_yso_variable_apogee|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10}|{'bright_3x1'}|{16000.0}|{1}|{'APOGEE'}|3.0|3.0|2705|2705
+mwm_yso_variable_boss|0.5.17|science|srd|y|mwm_yso|115|0.3.16|0|MWM|0|{10, 13, 14, 15}|{'bright_4x1', 'bright_5x1', 'bright_6x1', 'bright_3x1'}|{5400.0}|{0}|{'BOSS'}|3.0|6.0|2705|2705
+openfibertargets_nov2020_10|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_1000|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_1001a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_1001b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6085|6085
+openfibertargets_nov2020_11|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_12|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_14|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{30}|{'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6085|6085
+openfibertargets_nov2020_15|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_17|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_18|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_19a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_19b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_19c|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0, 5400.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_22|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_24|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_25|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_26|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{30}|{'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_27|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6085|6085
+openfibertargets_nov2020_28a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_28b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_28c|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_29|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_3|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_30|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{30}|{'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_31|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_32|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_33|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1, 30}|{'bright_1x1', 'dark_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_34a|0.5.13|science|filler|y|open_fiber|111|0.3.12|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_34b|0.5.13|science|filler|y|open_fiber|111|0.3.12|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_35a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_35b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_35c|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_46|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_47a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_47b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_47c|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_47d|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|6085|6085
+openfibertargets_nov2020_47e|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{16000.0}|{1}|{'APOGEE'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_5|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_6a|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6080
+openfibertargets_nov2020_6b|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_6c|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0}|{0}|{'BOSS'}|0.0|0.0|6085|6085
+openfibertargets_nov2020_8|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6085
+openfibertargets_nov2020_9|0.5.3|science|open|y|open_fiber|95|0.3.4|||0|{1}|{'bright_1x1'}|{5400.0, 16000.0}|{0, 1}|{'APOGEE', 'BOSS'}|0.0|0.0|6080|6080
+ops_2mass_psc_brightneighbors|0.5.5|veto_location_apogee|none|n|ops|99|0.3.6|||10|||||||||
+ops_gaia_brightneighbors|0.5.5|veto_location_boss|none|n|ops|99|0.3.6|||9|||||||||
+ops_sky_apogee_best|0.5.9|sky_apogee|srd|y|ops_sky|104|0.3.9|||4|||{16000.0}|{1}|{'APOGEE'}|||5200|5200
+ops_sky_apogee_good|0.5.9|sky_apogee|srd|y|ops_sky|104|0.3.9|||4|||{16000.0}|{1}|{'APOGEE'}|||5201|5201
+ops_sky_boss_best|0.5.9|sky_boss|srd|y|ops_sky|104|0.3.9|||5|||{5400.0}|{0}|{'BOSS'}|||5000|5000
+ops_sky_boss_good|0.5.9|sky_boss|srd|y|ops_sky|104|0.3.9|||5|||{5400.0}|{0}|{'BOSS'}|||5001|5001
+ops_sky_boss_fallback|0.5.12|sky_boss|srd|y|ops_sky|110|0.3.11|||5|||{5400.0}|{0}|{'BOSS'}|||5002|5002
+ops_std_apogee|0.5.0|standard_apogee|srd|y|ops_std|83|0.3.0|||1|||{16000.0}|{1}|{'APOGEE'}|||5500|5500
+ops_std_boss|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5425|5425
+ops_std_boss_gdr2|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5352|5352
+ops_std_boss_lsdr8|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5350|5350
+ops_std_boss_ps1dr2|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5351|5351
+ops_std_boss_red|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5450|5450
+ops_std_boss_tic|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5400|5400
+ops_std_eboss|0.5.0|standard_boss|srd|y|ops_std|83|0.3.0|||2|||{5400.0}|{0}|{'BOSS'}|||5300|5300
+ops_tycho2_brightneighbors|0.5.5|veto_location_boss|none|n|ops|99|0.3.6|||9|||||||||
