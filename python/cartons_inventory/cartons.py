@@ -474,23 +474,65 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
     Parameters
     ----------
     origin : str
+        ``rsconfig`` to use input list file from rsconfig, ``custom`` to use custom input list
+        of carton or ``targetdb`` to look for cartons in targetdb based on the ``all_cartons``,
+        ``cartons_name_pattern``, ``versions``, ``forced_versions``, and ``unique_versions``
+        parameters.
     files_folder : str
+        Main folder where input and output files would be stored. In this folder subfolders
+        rsconfig, custom, and targetdb are expected.
     inputname : str or None
+        Name of input file to be searched in <<files_folder>>/<<origin>> folder
     delim : str
+        Delimiter character to use when creating output .csv file
     check_exists : bool
+        If true and origin is rsconfig or custom the function looks for alternatives to cartons
+        that exist in targetdb but have different values of plan or category_label than carton
+        object. In this case the function returns a dataframe with the original carton versions
+        not found and the alternatives and exits the function
     verb : bool
+        If True function logs and prints alternatives to replace the input lines
+        corresponding to carton/plan/category_label combinations not found in targetdb with lines
+        corresponding to the same carton but with existing plan/category_label combinations.
     return_objects : bool
+        If True the function returns the CartonInfo objects.
     write_input : bool
+        If True the function writes a file to be used then as input by
+        process_cartons with the cartons retrieved by the targetdb query.
     write_output : bool
+        If True the function creates an output .csv file with the
+        information of each CartonInfo object.
     assign_sets : bool
+        If True assign_target_info assigns the attributes for target dependent parameters for the
+        carton. For each parameter returns a python set with all the values present in the carton
+        targets or the range spanned by them.
     assign_placeholders : bool
+        If True assign_target_info assigns magnitude placeholders found in targetdb for each
+        photometric system (SDSS, TMASS, GAIA) for each carton using check_mag_outliers.
     visualize : bool
+        If True we log and print all the information found in targetdb for each carton in a human
+        readable way
     overwrite : bool
+        If True enables that inputfile like and output file could be overwritten.
     all_cartons : bool
+        If True and origin=targetdb cartons with any name are taken from targetdb.
+        from targetdb
     cartons_name_pattern : str or None
+        If True and origin=targetdb only cartons with pattern name cartons_name_pattern are
+        are taken from targetdb. For example if cartons_name_pattern=bhm_rm_* only cartons
+        starting with bhm_rm_ would be taken from targetdb.
     versions : str
+        If True and origin=targetdb sets the versions that would be taken for each carton name
+        If ``single`` only versions matching ``unique_version`` will be taken, if ``latest``
+        only the latest version of each carton would be taken, if ``all`` all versions from each
+        carton is taken.
     forced_versions: dict or None
-    unique_version : str or None
+        If present, and origin=targetdb all cartons in this dictionary are forced to consider
+        only the version in the dictionary corresponding value, independent on the ``versions``
+        value.
+    unique_version : Int or None
+        If present, origin=targetdb, and versions=single then only this version_pk will be
+        considered for each carton
 
 
     Returns

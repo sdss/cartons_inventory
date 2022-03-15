@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cartons_inventory Reference &#8212; cartons_inventory 0.1.0a0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom_bootstrap.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon_sdssv.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Introduction to cartons_inventory" href="intro.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/sdssv_logo_small.png"></span>
+          SDSS: cartons_inventory</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">What's new in cartons_inventory?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to cartons_inventory</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">cartons_inventory Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-cartons_inventory.cartons">Cartons</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">cartons_inventory Reference</a><ul>
+<li><a class="reference internal" href="#module-cartons_inventory.cartons">Cartons</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="cartons-inventory-reference">
+<span id="api"></span><h1>cartons_inventory Reference<a class="headerlink" href="#cartons-inventory-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-cartons_inventory.cartons">
+<span id="cartons"></span><span id="api-cartons"></span><h2>Cartons<a class="headerlink" href="#module-cartons_inventory.cartons" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="cartons_inventory.cartons.CartonInfo">
+<em class="property">class </em><code class="sig-prename descclassname">cartons_inventory.cartons.</code><code class="sig-name descname">CartonInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carton</span></em>, <em class="sig-param"><span class="n">plan</span></em>, <em class="sig-param"><span class="n">category_label</span></em>, <em class="sig-param"><span class="n">stage</span><span class="o">=</span><span class="default_value">'N/A'</span></em>, <em class="sig-param"><span class="n">active</span><span class="o">=</span><span class="default_value">'N/A'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Saves targetdb info for cartons.</p>
+<p>This class takes basic information from a carton (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">plan</span></code>, and <code class="docutils literal notranslate"><span class="pre">category_label</span></code>
+at minimum) and at instantiation sets the carton dependent (as opposed to target dependent)
+information of the carton. <code class="docutils literal notranslate"><span class="pre">stage</span></code> and <code class="docutils literal notranslate"><span class="pre">active</span></code> parameters can also be provided but
+currently nothing is done with those. Carton dependent information is either taken from
+input parameters of __init__ or by the assign_carton_info function that also set the
+boolean in_targetdb to check the existence of the carton.</p>
+<p>Then, function assign_target_info assigns target dependent information which can be
+the magnitude placholders used for the different photometric system in the carton
+(calculate_mag_placeholders=True), and/or python sets with the unique values found per
+cadence, lambda, and instrument in the carton, along with <code class="docutils literal notranslate"><span class="pre">priority</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code>
+ranges.</p>
+<p>Finally, function process_cartons wraps all the functions of this class. Based on the value
+of the <code class="docutils literal notranslate"><span class="pre">origin</span></code> parameter, takes as input a file from rsconfig or curstom, or takes a
+selection criteria to search cartons in targetdb. With this function we can evaluate the
+existence of a list of cartons, check their content, save a selection criteria as an input
+file ready to be used by process_cartons, runs assign_target_info to get target parameter
+set, ranges, and/or magnitude_placeholders, saves an output .csv file with the information
+of each carton, or return a list of all the CartonInfo objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>carton</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Carton name in table targetdb.carton</p></li>
+<li><p><strong>plan</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Plan in table targetdb.version</p></li>
+<li><p><strong>category_label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Label in targetdb.category table (e.g. science, standard_boss, guide)</p></li>
+<li><p><strong>stage</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Robostrategy stage, could be srd, open, none, filler. Default is ‘N/A’</p></li>
+<li><p><strong>active</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – <code class="docutils literal notranslate"><span class="pre">y</span></code> or <code class="docutils literal notranslate"><span class="pre">n</span></code> to check if it is active in robostrategy. Default is ‘N/A’</p></li>
+<li><p><strong>mapper_label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Label in targetdb.mapper (MWM or BHM)</p></li>
+<li><p><strong>program</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Program in targetdb.program table</p></li>
+<li><p><strong>version_pk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – ID in targetdb.verion table</p></li>
+<li><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – tag in targetdb.version table</p></li>
+<li><p><strong>mapper_pk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – Mapper_pk in targetdb.carton table. 0 for MWM and 1 for BHM</p></li>
+<li><p><strong>category_pk</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – category_pk in targetdb.carton table (e.g. 0 for science)</p></li>
+<li><p><strong>in_targetdb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – True is carton/plan/category_label combination is found in targetdb, false if not.</p></li>
+<li><p><strong>sets_calculated</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – True when in_targetdb is True and target dependent parameters value_min, value_max,
+priority_min, priority_max, cadence_pk, cadence_label, lambda_eff, instrument_pk,
+and instrument_label have been calculated for the carton using
+assign_target_info(calculate_sets=True)</p></li>
+<li><p><strong>mag_placeholders_calculated</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – True when magnitude placholdes used for SDSS, TMASS, and GAIA photometric systems
+have been calculated. These are calculated using check_magnitude_outliers function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.assign_carton_info">
+<code class="sig-name descname">assign_carton_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.assign_carton_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.assign_carton_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns carton dependent information for cartons in targetdb.</p>
+<p>If the carton/plan/category_label combination in the CartonInfo object
+is found in targetdb this function assigns attributes for carton dependent
+parameters (parameters shared for all targets in the carton). These paraemters
+are mapper_label, program, version_pk, tag, mapper_pk, and category_pk.
+Finally it set in_targetdb attribute as True when found in the database.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.assign_target_info">
+<code class="sig-name descname">assign_target_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">calculate_sets</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">calculate_mag_placeholders</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.assign_target_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.assign_target_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assignt target dependent information for cartons in targetdb.</p>
+<p>This function calls return_target_dataframe to get a Pandas DataFrame
+with target dependent information for a carton. Then it sets different attributes
+to the CartonInfo object depending on the values of calculate_sets and
+calculate_mag_placeholders</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calculate_sets</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If true this function assigns the attributes value_min, value_max,
+priority_min, priority_max, cadence_pk, cadence_label, lambda_eff, instrument_pk,
+and instrument_label, based on information from targetdb. It also sets the attribute
+sets_calculated as True to keep record.</p></li>
+<li><p><strong>calculate_mag_placeholders</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If true this function assigns the attribute magnitude_placeholders using
+check_mag_outliers function, and sets mag_placeholers_calculated=True to keep record.
+magnitude_placeholres is a set with all the combination of photometric system
+(SDSS, TMASS, GAIA) and mag placeholder used for that photometric system in that
+carton (None, Invalid, 0.0, -9999.0, 999, 99.9).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.build_query_target">
+<code class="sig-name descname">build_query_target</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.build_query_target"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.build_query_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the query with the target dependet information of the carton.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.check_existence">
+<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">log</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.check_existence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the carton/plan/category_label from object is found in targetdb.</p>
+<p>This function checks whether a carton exists or not in targetdb, to be used
+when a list of cartons is used in process_cartons (i.e. <code class="docutils literal notranslate"><span class="pre">origin</span></code> rsconfig or custom)
+or to check the existence of a single carton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log</strong> (<em>SDSSLogger</em>) – Log used to store information of cartons_inventory</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If true and if the carton is not found in the database the function will print
+and save on log information to try to correct the input file from which the
+carton/plan/category_label was taken (and stored in the object). If no carton
+with that name is found in targetdb it will print the associated warning, and if
+cartons with the same name but different plan or category_label are found a line
+with input file format will be printed for each of those cartons so the user
+can replace the line in the input file with one of the options proposed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cartons_aleternatives</strong> (<em>Pandas DataFrame</em>) – A Pandas DataFrame that for each carton/plan/category_label combination not found
+in targetdb has an entry for it and for all the alternative cartons found in targetdb
+that have the same carton name but different plan or category. For each entry the
+dataframe contains the columns carton, plan, category_label, stage, active, tag,
+version_pk, and in_targetdb.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.print_param">
+<code class="sig-name descname">print_param</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">width</span></em>, <em class="sig-param"><span class="n">log</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.print_param"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.print_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>logs a message with width=width containing a parameter from carton object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.print_range">
+<code class="sig-name descname">print_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">par</span></em>, <em class="sig-param"><span class="n">width</span></em>, <em class="sig-param"><span class="n">log</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.print_range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.print_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>logs a message with width=width containing the range of a parameter from the carton.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.return_target_dataframe">
+<code class="sig-name descname">return_target_dataframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.return_target_dataframe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.return_target_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes query from build_query_target and returns it in a Pandas DataFrame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cartons_inventory.cartons.CartonInfo.visualize_content">
+<code class="sig-name descname">visualize_content</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">log</span></em>, <em class="sig-param"><span class="n">width</span><span class="o">=</span><span class="default_value">140</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#CartonInfo.visualize_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.visualize_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs and prints information from targetdb for a given carton.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cartons_inventory.cartons.CartonInfo.cfg">
+<code class="sig-name descname">cfg</code><em class="property"> = {'bands': {'GAIA': ['bp', 'rp', 'gaia_g'], 'SDSS': ['g', 'r', 'i', 'z'], 'TMASS': ['j', 'h', 'k']}, 'db_fields': {'carton_dependent': ['program', 'version_pk', 'tag', 'mapper_pk', 'mapper_label', 'category_pk'], 'input_dependent': ['plan', 'category_label', 'stage', 'active'], 'set_ranges': ['value', 'priority'], 'sets': ['value', 'priority', 'cadence_pk', 'cadence_label', 'lambda_eff', 'instrument_pk', 'instrument_label']}}</em><a class="headerlink" href="#cartons_inventory.cartons.CartonInfo.cfg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="cartons_inventory.cartons.check_mag_outliers">
+<code class="sig-prename descclassname">cartons_inventory.cartons.</code><code class="sig-name descname">check_mag_outliers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datafr</span></em>, <em class="sig-param"><span class="n">bands</span></em>, <em class="sig-param"><span class="n">systems</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#check_mag_outliers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.check_mag_outliers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list with all the types of outliers found for each photometric system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datafr</strong> (<em>Pandas DataFrame</em>) – Containing the magnitudes from different photometric systems for the stars in a
+given carton.</p></li>
+<li><p><strong>bands</strong> (<em>strings list</em>) – Containing the bands to search each belonging to a given photometric system.</p></li>
+<li><p><strong>system</strong> (<em>strings list</em>) – Photometric system to which each band listed belongs to. The options are
+‘SDSS’, ‘TMASS’, and ‘GAIA’. The system to which a band belongs is defined by the
+index of the band in the list (i.e. band[ind] belongs to systems[ind])</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><strong>placeholders</strong> (<em>set</em>) – A set of strings where each string starts with the photometric system,
+then an underscore and finally the type of magnitude outlier that at least one
+magnitude of the corresponding system has.
+The type of outliers are: None (For empty entries), Invalid (For Nan’s and
+infinite values), and &lt;&lt;Number&gt;&gt; (For values brighter than -9, dimmer than 50,
+or equal to zero), in the latter cases the number itself is returned as the outlier type.</p>
+<p>For example if a carton contains stars with h=999.9, k=999.9, j=None, and bp=Inf.
+This function will return {‘TMASS_999.9’, ‘TMASS_None’, ‘GAIA_Invalid}.</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cartons_inventory.cartons.gets_carton_info">
+<code class="sig-prename descclassname">cartons_inventory.cartons.</code><code class="sig-name descname">gets_carton_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">carton_list_filename</span></em>, <em class="sig-param"><span class="n">header_length</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">delimiter</span><span class="o">=</span><span class="default_value">'|'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#gets_carton_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.gets_carton_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the necessary information from the input carton list file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cartons_inventory.cartons.print_centered_msg">
+<code class="sig-prename descclassname">cartons_inventory.cartons.</code><code class="sig-name descname">print_centered_msg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">st</span></em>, <em class="sig-param"><span class="n">width</span></em>, <em class="sig-param"><span class="n">log</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#print_centered_msg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.print_centered_msg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs and prints string st with width=width in the log</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cartons_inventory.cartons.process_cartons">
+<code class="sig-prename descclassname">cartons_inventory.cartons.</code><code class="sig-name descname">process_cartons</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">'rsconfig'</span></em>, <em class="sig-param"><span class="n">files_folder</span><span class="o">=</span><span class="default_value">'./files/'</span></em>, <em class="sig-param"><span class="n">inputname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delim</span><span class="o">=</span><span class="default_value">'|'</span></em>, <em class="sig-param"><span class="n">check_exists</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">verb</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">return_objects</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">write_input</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">write_output</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">assign_sets</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">assign_placeholders</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">visualize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">all_cartons</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cartons_name_pattern</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">'latest'</span></em>, <em class="sig-param"><span class="n">forced_versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unique_version</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cartons_inventory/cartons.html#process_cartons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cartons_inventory.cartons.process_cartons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get targetdb information for list of cartons or selection criteria and outputs .csv file.</p>
+<p>Takes as input a file with a list of cartons from rsconfig (origin=``rsconfig``)
+or custom (origin=``custom``) or a selection criteria to be applied on targetdb
+(origin=``targetdb) in which case an input list file can also be created
+(with write_input=True) for future use.</p>
+<p>This function can be used to check the existence of the cartons (check_exist=True)
+in which case it returns a dataframe with the alternative cartons information, or
+it can be used to call assign_target_info to get the targetdb information of all
+the cartons (check_exists=False) and store it in a .csv file and/or return the
+CartonInfo objects.</p>
+<p>The function also has provides the option of logging and printing the targetdb information
+from all the cartons in a human readable way by using visualize=True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
+<li><p><strong>files_folder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
+<li><p><strong>inputname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
+<li><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
+<li><p><strong>check_exists</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>return_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>write_input</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>write_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>assign_sets</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>assign_placeholders</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>visualize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>all_cartons</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
+<li><p><strong>cartons_name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
+<li><p><strong>versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
+<li><p><strong>forced_versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
+<li><p><strong>unique_version</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022, Felipe Santana.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

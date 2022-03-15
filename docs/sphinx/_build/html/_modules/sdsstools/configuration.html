@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sdsstools.configuration &#8212; cartons_inventory 0.1.0a0 documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_bootstrap.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon_sdssv.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/sdssv_logo_small.png"></span>
+          SDSS: cartons_inventory</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">What's new in cartons_inventory?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction to cartons_inventory</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">cartons_inventory Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#module-cartons_inventory.cartons">Cartons</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <h1>Source code for sdsstools.configuration</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># @Author: José Sánchez-Gallego (gallegoj@uw.edu)</span>
+<span class="c1"># @Date: 2019-05-08</span>
+<span class="c1"># @Filename: configuration.py</span>
+<span class="c1"># @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)</span>
+
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;read_yaml_file&#39;</span><span class="p">,</span> <span class="s1">&#39;merge_config&#39;</span><span class="p">,</span> <span class="s1">&#39;get_config&#39;</span><span class="p">,</span> <span class="s1">&#39;Configuration&#39;</span><span class="p">]</span>
+
+
+<span class="n">__ENVVARS__</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Potential paths where the user configuration file could be. Must not include</span>
+<span class="c1"># the yml or yaml extension.</span>
+<span class="n">DEFAULT_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;~/.config/sdss/</span><span class="si">{name}</span><span class="s1">&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;~/.config/sdss/</span><span class="si">{name}</span><span class="s1">/</span><span class="si">{name}</span><span class="s1">&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;~/.</span><span class="si">{name}</span><span class="s1">/</span><span class="si">{name}</span><span class="s1">&#39;</span><span class="p">]</span>
+
+<span class="n">env_matcher</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\$\{([^}^{]+)\}&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">env_constructor</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract the matched value, expand env variable, and replace the match.&quot;&quot;&quot;</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">env_matcher</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">env_var</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">()[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">env_var</span><span class="p">,</span> <span class="n">__ENVVARS__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">env_var</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span> <span class="o">+</span> <span class="n">value</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">():]</span>
+
+
+<span class="n">yaml</span><span class="o">.</span><span class="n">add_implicit_resolver</span><span class="p">(</span><span class="s1">&#39;!env&#39;</span><span class="p">,</span> <span class="n">env_matcher</span><span class="p">)</span>
+<span class="n">yaml</span><span class="o">.</span><span class="n">add_constructor</span><span class="p">(</span><span class="s1">&#39;!env&#39;</span><span class="p">,</span> <span class="n">env_constructor</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">read_yaml_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">use_extends</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Read a YAML file and returns a dictionary.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="n">path</span>
+
+    <span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">loader</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">config</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">config</span> <span class="o">==</span> <span class="p">{}:</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="k">if</span> <span class="n">use_extends</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#!extends&#39;</span><span class="p">):</span>
+                <span class="n">base_file</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">base_file</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;buffer&#39;</span><span class="p">):</span>
+                    <span class="n">base_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">base_file</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">base_file</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">FileExistsError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cannot find !extends file </span><span class="si">{</span><span class="n">base_file</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">merge_config</span><span class="p">(</span><span class="n">read_yaml_file</span><span class="p">(</span><span class="n">base_file</span><span class="p">,</span> <span class="n">use_extends</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                                    <span class="n">config</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+    <span class="k">return</span> <span class="n">config</span>
+
+
+<span class="k">def</span> <span class="nf">merge_config</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">default</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Merges a user configuration with the default one.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">kk</span><span class="p">,</span> <span class="n">vv</span> <span class="ow">in</span> <span class="n">default</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">kk</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">user</span><span class="p">:</span>
+                <span class="n">user</span><span class="p">[</span><span class="n">kk</span><span class="p">]</span> <span class="o">=</span> <span class="n">vv</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">user</span><span class="p">[</span><span class="n">kk</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_config</span><span class="p">(</span><span class="n">user</span><span class="p">[</span><span class="n">kk</span><span class="p">],</span> <span class="n">vv</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">user</span>
+
+
+<span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">config_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allow_user</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">user_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">config_envvar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">merge_mode</span><span class="o">=</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="n">default_envvars</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a configuration dictionary.</span>
+
+<span class="sd">    The configuration dictionary is created by merging the default</span>
+<span class="sd">    configuration file that is part of the library (normally in</span>
+<span class="sd">    ``etc/&lt;name&gt;.yml``) with a user configuration file. The path to the user</span>
+<span class="sd">    configuration file can be defined as an environment variable to be passed</span>
+<span class="sd">    to this function in ``config_envvar`` or as a path in ``user_path``.</span>
+<span class="sd">    The environment variable, if exists, always takes precedence.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The name of the package.</span>
+<span class="sd">    config_file : str</span>
+<span class="sd">        The path to the configuration file. If `None`, defaults to</span>
+<span class="sd">        ``etc/&lt;name&gt;.yml`` relative to the file that called `.get_config`.</span>
+<span class="sd">    allow_user : bool</span>
+<span class="sd">        If `True`, looks for an user configuration file and merges is to the</span>
+<span class="sd">        default configuration. Otherwise it returns just the default</span>
+<span class="sd">        configuration.</span>
+<span class="sd">    user_path : str</span>
+<span class="sd">        The path to the user configuration file. Defaults to</span>
+<span class="sd">        ``~/.config/sdss/&lt;name&gt;/&lt;name&gt;.yml``. Ignored if the file does not</span>
+<span class="sd">        exist.</span>
+<span class="sd">    config_envvar : str</span>
+<span class="sd">        The environment variable that contains the path to the user</span>
+<span class="sd">        configuration file. Defaults to ``&lt;name&gt;_CONFIG_PATH``. If the</span>
+<span class="sd">        environment variable exists, the ``user_path`` is ignored.</span>
+<span class="sd">    merge_mode : str</span>
+<span class="sd">        Defines how the default and user dictionaries will be merged. If</span>
+<span class="sd">        ``update``, the user dictionary will be used to update the default</span>
+<span class="sd">        configuration. If ``replace``, only the user configuration will be</span>
+<span class="sd">        returned.</span>
+<span class="sd">    default_envvars : dict</span>
+<span class="sd">        Default values for environment variables used in the configuration</span>
+<span class="sd">        file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    .Configuration</span>
+<span class="sd">        A `.Configuration` instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="n">merge_mode</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">],</span> <span class="s1">&#39;invalid merge mode.&#39;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">config_file</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+            <span class="n">config_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;etc/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">.yml&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">config_file</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">allow_user</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">base_config</span><span class="o">=</span><span class="n">config_file</span><span class="p">,</span>
+                             <span class="n">default_envvars</span><span class="o">=</span><span class="n">default_envvars</span><span class="p">)</span>
+
+    <span class="n">config_envvar</span> <span class="o">=</span> <span class="n">config_envvar</span> <span class="ow">or</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">_CONFIG_PATH&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">user_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">user_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">user_path</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">user_path</span><span class="p">),</span> <span class="sa">f</span><span class="s1">&#39;User path </span><span class="si">{</span><span class="n">user_path</span><span class="si">!r}</span><span class="s1"> not found.&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Test a few default paths and exit when finds one.</span>
+        <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;.yml&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">extension</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">DEFAULT_PATHS</span><span class="p">,</span> <span class="n">extensions</span><span class="p">):</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">test_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">extension</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">test_path</span><span class="p">):</span>
+                <span class="n">user_path</span> <span class="o">=</span> <span class="n">test_path</span>
+                <span class="k">break</span>
+
+    <span class="k">if</span> <span class="n">config_envvar</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="n">custom_config_fn</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">config_envvar</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">user_path</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">user_path</span><span class="p">):</span>
+        <span class="n">custom_config_fn</span> <span class="o">=</span> <span class="n">user_path</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">custom_config_fn</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">merge_mode</span> <span class="o">==</span> <span class="s1">&#39;update&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">custom_config_fn</span><span class="p">,</span> <span class="n">base_config</span><span class="o">=</span><span class="n">config_file</span><span class="p">,</span>
+                             <span class="n">default_envvars</span><span class="o">=</span><span class="n">default_envvars</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">custom_config_fn</span><span class="p">,</span> <span class="n">base_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                             <span class="n">default_envvars</span><span class="o">=</span><span class="n">default_envvars</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Configuration</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A configuration class.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : str or dict</span>
+<span class="sd">        The path to the configuration file or the already parsed configuration</span>
+<span class="sd">        as a dictionary.</span>
+<span class="sd">    base_config : str or dict</span>
+<span class="sd">        A base configuration or file that the input configuration will update.</span>
+<span class="sd">    default_envvars : dict</span>
+<span class="sd">        Default values for environment variables used in the configuration</span>
+<span class="sd">        file.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_envvars</span><span class="o">=</span><span class="p">{}):</span>
+
+        <span class="k">global</span> <span class="n">__ENVVARS__</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">base_config</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_BASE</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_config</span><span class="p">(</span><span class="n">base_config</span><span class="p">,</span> <span class="n">use_base</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_BASE</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILE</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">__ENVVARS__</span> <span class="o">=</span> <span class="n">default_envvars</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_parse_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">use_base</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parses the configuration and merges it with the base one.&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">use_base</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_BASE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">config</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
+                <span class="k">return</span> <span class="n">read_yaml_file</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid config of type </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">config</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">merge_config</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parse_config</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">use_base</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_BASE</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Loads a configuration file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        config : str or dict</span>
+<span class="sd">            The configuration file or dictionary to load. If a base</span>
+<span class="sd">            configuration was defined when the object was instantiated, it</span>
+<span class="sd">            will be merged. If ``config=None``, the object will revert to the</span>
+<span class="sd">            base configuration.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">config</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILE</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parse_config</span><span class="p">(</span><span class="n">config</span><span class="p">))</span>
+
+        <span class="c1"># Save name of the configuration file (if the input is a file).</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">CONFIG_FILE</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022, Felipe Santana.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

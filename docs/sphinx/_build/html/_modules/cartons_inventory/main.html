@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cartons_inventory.main &#8212; cartons_inventory 0.1.0a0 documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_bootstrap.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon_sdssv.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/sdssv_logo_small.png"></span>
+          SDSS: cartons_inventory</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">What's new in cartons_inventory?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction to cartons_inventory</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">cartons_inventory Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api.html#module-cartons_inventory.cartons">Cartons</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <h1>Source code for cartons_inventory.main</h1><div class="highlight"><pre>
+<span></span><span class="c1"># encoding: utf-8</span>
+<span class="c1">#</span>
+<span class="c1"># @Author: José Sánchez-Gallego</span>
+<span class="c1"># @Date: Oct 12, 2017</span>
+<span class="c1"># @Filename: main.py</span>
+<span class="c1"># @License: BSD 3-Clause</span>
+<span class="c1"># @Copyright: José Sánchez-Gallego</span>
+
+<span class="kn">import</span> <span class="nn">operator</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;get_range&#39;</span><span class="p">,</span> <span class="s1">&#39;set_or_none&#39;</span><span class="p">,</span> <span class="s1">&#39;math&#39;</span><span class="p">,</span> <span class="s1">&#39;MyClass&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="get_range"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.get_range">[docs]</a><span class="k">def</span> <span class="nf">get_range</span><span class="p">(</span><span class="n">set_p</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Gets the total range of a given set.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">set_p</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">minp</span><span class="p">,</span> <span class="n">maxp</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">minp</span><span class="p">,</span> <span class="n">maxp</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">set_p</span><span class="p">)),</span> <span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">set_p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">minp</span><span class="p">,</span> <span class="n">maxp</span></div>
+
+
+<div class="viewcode-block" id="set_or_none"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.set_or_none">[docs]</a><span class="k">def</span> <span class="nf">set_or_none</span><span class="p">(</span><span class="n">list_l</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Function to avoid list-&gt;set transformation to return set={None} or set={}.&quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">list_l</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="p">{</span><span class="kc">None</span><span class="p">}</span> <span class="ow">or</span> <span class="n">res</span> <span class="o">==</span> <span class="p">{}</span> <span class="ow">or</span> <span class="n">res</span> <span class="o">==</span> <span class="nb">set</span><span class="p">():</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">res</span></div>
+
+
+<div class="viewcode-block" id="math"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.math">[docs]</a><span class="k">def</span> <span class="nf">math</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arith_operator</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Performs an arithmetic operation.</span>
+
+<span class="sd">    This function accepts to numbers and performs an arithmetic operation</span>
+<span class="sd">    with them. The arithmetic operation can be passed as a string. By default,</span>
+<span class="sd">    the addition operator is assumed.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        arg1,arg2 (float):</span>
+<span class="sd">            The numbers that we will sub/subtract/multiply/divide.</span>
+<span class="sd">        arith_operator ({&#39;+&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;}):</span>
+<span class="sd">            A string indicating the arithmetic operation to perform.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        result (float):</span>
+<span class="sd">            The result of the arithmetic operation.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">      &gt;&gt;&gt; math(2, 2, arith_operator=&#39;*&#39;)</span>
+<span class="sd">      &gt;&gt;&gt; 4</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">str_to_operator</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;+&#39;</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span>
+                       <span class="s1">&#39;-&#39;</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">sub</span><span class="p">,</span>
+                       <span class="s1">&#39;*&#39;</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span>
+                       <span class="s1">&#39;/&#39;</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">truediv</span><span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">str_to_operator</span><span class="p">[</span><span class="n">arith_operator</span><span class="p">](</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MyClass"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.MyClass">[docs]</a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A description of the class.</span>
+
+<span class="sd">    The top docstring in a class describes the class in general, and the</span>
+<span class="sd">    parameters to be passed to the class ``__init__``.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        arg1 (float):</span>
+<span class="sd">            The first argument.</span>
+<span class="sd">        arg2 (int):</span>
+<span class="sd">            The second argument.</span>
+<span class="sd">        kwarg1 (str):</span>
+<span class="sd">            A keyword argument.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        name (str): A description of what names gives acces to.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">kwarg1</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">arg1</span>
+
+<div class="viewcode-block" id="MyClass.do_something"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.MyClass.do_something">[docs]</a>    <span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A description of what this method does.&quot;&quot;&quot;</span>
+
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="MyClass.do_something_else"><a class="viewcode-back" href="../../api.html#cartons_inventory.main.MyClass.do_something_else">[docs]</a>    <span class="k">def</span> <span class="nf">do_something_else</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A description of what this method does.</span>
+
+<span class="sd">        If the class only has one or two arguments, you can describe them</span>
+<span class="sd">        inline. ``param`` is the parameter that we use to do something else.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022, Felipe Santana.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
