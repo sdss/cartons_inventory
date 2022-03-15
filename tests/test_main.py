@@ -4,7 +4,7 @@
 
 from pytest import mark
 
-from cartons_inventory.__main__ import math
+from cartons_inventory.main import math
 
 
 class TestMath(object):
