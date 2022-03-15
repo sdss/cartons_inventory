@@ -317,24 +317,47 @@ from all the cartons in a human readable way by using visualize=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
-<li><p><strong>files_folder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
-<li><p><strong>inputname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
-<li><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
-<li><p><strong>check_exists</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>return_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>write_input</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>write_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>assign_sets</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>assign_placeholders</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>visualize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>all_cartons</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – </p></li>
-<li><p><strong>cartons_name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
-<li><p><strong>versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – </p></li>
-<li><p><strong>forced_versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
-<li><p><strong>unique_version</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – </p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – <code class="docutils literal notranslate"><span class="pre">rsconfig</span></code> to use input list file from rsconfig, <code class="docutils literal notranslate"><span class="pre">custom</span></code> to use custom input list
+of carton or <code class="docutils literal notranslate"><span class="pre">targetdb</span></code> to look for cartons in targetdb based on the <code class="docutils literal notranslate"><span class="pre">all_cartons</span></code>,
+<code class="docutils literal notranslate"><span class="pre">cartons_name_pattern</span></code>, <code class="docutils literal notranslate"><span class="pre">versions</span></code>, <code class="docutils literal notranslate"><span class="pre">forced_versions</span></code>, and <code class="docutils literal notranslate"><span class="pre">unique_versions</span></code>
+parameters.</p></li>
+<li><p><strong>files_folder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Main folder where input and output files would be stored. In this folder subfolders
+rsconfig, custom, and targetdb are expected.</p></li>
+<li><p><strong>inputname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – Name of input file to be searched in &lt;&lt;files_folder&gt;&gt;/&lt;&lt;origin&gt;&gt; folder</p></li>
+<li><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – Delimiter character to use when creating output .csv file</p></li>
+<li><p><strong>check_exists</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If true and origin is rsconfig or custom the function looks for alternatives to cartons
+that exist in targetdb but have different values of plan or category_label than carton
+object. In this case the function returns a dataframe with the original carton versions
+not found and the alternatives and exits the function</p></li>
+<li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True function logs and prints alternatives to replace the input lines
+corresponding to carton/plan/category_label combinations not found in targetdb with lines
+corresponding to the same carton but with existing plan/category_label combinations.</p></li>
+<li><p><strong>return_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True the function returns the CartonInfo objects.</p></li>
+<li><p><strong>write_input</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True the function writes a file to be used then as input by
+process_cartons with the cartons retrieved by the targetdb query.</p></li>
+<li><p><strong>write_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True the function creates an output .csv file with the
+information of each CartonInfo object.</p></li>
+<li><p><strong>assign_sets</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True assign_target_info assigns the attributes for target dependent parameters for the
+carton. For each parameter returns a python set with all the values present in the carton
+targets or the range spanned by them.</p></li>
+<li><p><strong>assign_placeholders</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True assign_target_info assigns magnitude placeholders found in targetdb for each
+photometric system (SDSS, TMASS, GAIA) for each carton using check_mag_outliers.</p></li>
+<li><p><strong>visualize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True we log and print all the information found in targetdb for each carton in a human
+readable way</p></li>
+<li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True enables that inputfile like and output file could be overwritten.</p></li>
+<li><p><strong>all_cartons</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – If True and origin=targetdb cartons with any name are taken from targetdb.
+from targetdb</p></li>
+<li><p><strong>cartons_name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – If True and origin=targetdb only cartons with pattern name cartons_name_pattern are
+are taken from targetdb. The string uses * character as wildcard</p></li>
+<li><p><strong>versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – If True and origin=targetdb sets the versions that would be taken for each carton name
+If <code class="docutils literal notranslate"><span class="pre">single</span></code> only versions matching <code class="docutils literal notranslate"><span class="pre">unique_version</span></code> will be taken, if <code class="docutils literal notranslate"><span class="pre">latest</span></code>
+only the latest version of each carton would be taken, if <code class="docutils literal notranslate"><span class="pre">all</span></code> all versions from each
+carton is taken.</p></li>
+<li><p><strong>forced_versions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – If present, and origin=targetdb all cartons in this dictionary are forced to consider
+only the version in the dictionary corresponding value, independent on the <code class="docutils literal notranslate"><span class="pre">versions</span></code>
+value.</p></li>
+<li><p><strong>unique_version</strong> (<em>Int</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – If present, origin=targetdb, and versions=single then only this version_pk will be
+considered for each carton</p></li>
 </ul>
 </dd>
 </dl>

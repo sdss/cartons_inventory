@@ -519,8 +519,7 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
         from targetdb
     cartons_name_pattern : str or None
         If True and origin=targetdb only cartons with pattern name cartons_name_pattern are
-        are taken from targetdb. For example if cartons_name_pattern=bhm_rm_* only cartons
-        starting with bhm_rm_ would be taken from targetdb.
+        are taken from targetdb. The string uses * character as wildcard 
     versions : str
         If True and origin=targetdb sets the versions that would be taken for each carton name
         If ``single`` only versions matching ``unique_version`` will be taken, if ``latest``

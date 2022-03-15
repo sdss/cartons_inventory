@@ -574,23 +574,64 @@
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    origin : str</span>
+<span class="sd">        ``rsconfig`` to use input list file from rsconfig, ``custom`` to use custom input list</span>
+<span class="sd">        of carton or ``targetdb`` to look for cartons in targetdb based on the ``all_cartons``,</span>
+<span class="sd">        ``cartons_name_pattern``, ``versions``, ``forced_versions``, and ``unique_versions``</span>
+<span class="sd">        parameters.</span>
 <span class="sd">    files_folder : str</span>
+<span class="sd">        Main folder where input and output files would be stored. In this folder subfolders</span>
+<span class="sd">        rsconfig, custom, and targetdb are expected.</span>
 <span class="sd">    inputname : str or None</span>
+<span class="sd">        Name of input file to be searched in &lt;&lt;files_folder&gt;&gt;/&lt;&lt;origin&gt;&gt; folder</span>
 <span class="sd">    delim : str</span>
+<span class="sd">        Delimiter character to use when creating output .csv file</span>
 <span class="sd">    check_exists : bool</span>
+<span class="sd">        If true and origin is rsconfig or custom the function looks for alternatives to cartons</span>
+<span class="sd">        that exist in targetdb but have different values of plan or category_label than carton</span>
+<span class="sd">        object. In this case the function returns a dataframe with the original carton versions</span>
+<span class="sd">        not found and the alternatives and exits the function</span>
 <span class="sd">    verb : bool</span>
+<span class="sd">        If True function logs and prints alternatives to replace the input lines</span>
+<span class="sd">        corresponding to carton/plan/category_label combinations not found in targetdb with lines</span>
+<span class="sd">        corresponding to the same carton but with existing plan/category_label combinations.</span>
 <span class="sd">    return_objects : bool</span>
+<span class="sd">        If True the function returns the CartonInfo objects.</span>
 <span class="sd">    write_input : bool</span>
+<span class="sd">        If True the function writes a file to be used then as input by</span>
+<span class="sd">        process_cartons with the cartons retrieved by the targetdb query.</span>
 <span class="sd">    write_output : bool</span>
+<span class="sd">        If True the function creates an output .csv file with the</span>
+<span class="sd">        information of each CartonInfo object.</span>
 <span class="sd">    assign_sets : bool</span>
+<span class="sd">        If True assign_target_info assigns the attributes for target dependent parameters for the</span>
+<span class="sd">        carton. For each parameter returns a python set with all the values present in the carton</span>
+<span class="sd">        targets or the range spanned by them.</span>
 <span class="sd">    assign_placeholders : bool</span>
+<span class="sd">        If True assign_target_info assigns magnitude placeholders found in targetdb for each</span>
+<span class="sd">        photometric system (SDSS, TMASS, GAIA) for each carton using check_mag_outliers.</span>
 <span class="sd">    visualize : bool</span>
+<span class="sd">        If True we log and print all the information found in targetdb for each carton in a human</span>
+<span class="sd">        readable way</span>
 <span class="sd">    overwrite : bool</span>
+<span class="sd">        If True enables that inputfile like and output file could be overwritten.</span>
 <span class="sd">    all_cartons : bool</span>
+<span class="sd">        If True and origin=targetdb cartons with any name are taken from targetdb.</span>
+<span class="sd">        from targetdb</span>
 <span class="sd">    cartons_name_pattern : str or None</span>
+<span class="sd">        If True and origin=targetdb only cartons with pattern name cartons_name_pattern are</span>
+<span class="sd">        are taken from targetdb. The string uses * character as wildcard </span>
 <span class="sd">    versions : str</span>
+<span class="sd">        If True and origin=targetdb sets the versions that would be taken for each carton name</span>
+<span class="sd">        If ``single`` only versions matching ``unique_version`` will be taken, if ``latest``</span>
+<span class="sd">        only the latest version of each carton would be taken, if ``all`` all versions from each</span>
+<span class="sd">        carton is taken.</span>
 <span class="sd">    forced_versions: dict or None</span>
-<span class="sd">    unique_version : str or None</span>
+<span class="sd">        If present, and origin=targetdb all cartons in this dictionary are forced to consider</span>
+<span class="sd">        only the version in the dictionary corresponding value, independent on the ``versions``</span>
+<span class="sd">        value.</span>
+<span class="sd">    unique_version : Int or None</span>
+<span class="sd">        If present, origin=targetdb, and versions=single then only this version_pk will be</span>
+<span class="sd">        considered for each carton</span>
 
 
 <span class="sd">    Returns</span>
