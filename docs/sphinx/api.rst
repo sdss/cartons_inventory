@@ -1,8 +1,8 @@
 
 .. _api:
 
-cartons_inventory Reference
-===========================
+Low-level API
+=============
 
 .. _api-cartons:
 
