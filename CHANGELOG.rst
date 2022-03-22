@@ -4,5 +4,6 @@
 Change Log
 ==========
 
-* First change goes here.
+* Added first working version on March 22th 2022 starting from SDSS
+  cookiecutter https://github.com/sdss/python_template.git
 
