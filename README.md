@@ -50,7 +50,7 @@ the versions matching the _unique\_version_ int, which has to be defined. Then y
 for specific cartons where the keys are the name of the cartons for which you want to use a specific version, and the values are the version you want to use for each of those
 cartons.
 
-For example in the following block code we create input file './files/targetdb/Cartons\_sample\_Versions\_single\_and\_forced.txt' with a list of cartons starting with 'bm\_rm' with _version\_pk_
+For example in the following block code we create input file ['./files/targetdb/Cartons\_sample\_Versions\_single\_and\_forced.txt'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/targetdb/Cartons_sample_Versions_single_and_forced.txt) with a list of cartons starting with 'bm\_rm' with _version\_pk_
 49 except for carton 'bhm\_rm\_core' for which we search _version_ 83. This file can then be used as the input file for process\_cartons by copying it to the './files/custom/' folder and using
 _origin_='custom' and _inputname_='Cartons\_sample\_Versions\_single\_and\_forced.txt'. The name assigned in these cases is 'Cartons\_' followed by 'all' or 'sample' depending on whether we are
 searching all carton names or not, then '_Versions_' followed by the value of _versions_ or the value of _unique\_version_ if _version_='single', finally a suffix '_and\_forced' is added if the
