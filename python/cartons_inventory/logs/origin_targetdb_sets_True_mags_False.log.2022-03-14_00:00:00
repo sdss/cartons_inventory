@@ -1,0 +1,160 @@
+2022-03-14 10:32:12,025 - INFO - Ran process_cartons using the following arguments
+
+2022-03-14 10:32:12,025 - INFO - origin=targetdb
+2022-03-14 10:32:12,025 - INFO - files_folder=./files/
+2022-03-14 10:32:12,026 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:32:12,026 - INFO - delim=|
+2022-03-14 10:32:12,026 - INFO - return_differences=False
+2022-03-14 10:32:12,026 - INFO - return_objects=False
+2022-03-14 10:32:12,026 - INFO - write_input=True
+2022-03-14 10:32:12,026 - INFO - write_output=True
+2022-03-14 10:32:12,026 - INFO - assign_sets=True
+2022-03-14 10:32:12,026 - INFO - assign_placeholders=False
+2022-03-14 10:32:12,026 - INFO - visualize=False
+2022-03-14 10:32:12,026 - INFO - overwrite=True
+2022-03-14 10:32:12,026 - INFO - all_cartons=False
+2022-03-14 10:32:12,026 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:32:12,026 - INFO - versions=single
+2022-03-14 10:32:12,026 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:32:12,026 - INFO - unique_version=83
+2022-03-14 10:35:43,087 - INFO - Ran process_cartons using the following arguments
+
+2022-03-14 10:35:43,087 - INFO - origin=targetdb
+2022-03-14 10:35:43,087 - INFO - files_folder=./files/
+2022-03-14 10:35:43,088 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:35:43,088 - INFO - delim=|
+2022-03-14 10:35:43,088 - INFO - return_differences=False
+2022-03-14 10:35:43,088 - INFO - return_objects=False
+2022-03-14 10:35:43,088 - INFO - write_input=True
+2022-03-14 10:35:43,088 - INFO - write_output=True
+2022-03-14 10:35:43,088 - INFO - assign_sets=True
+2022-03-14 10:35:43,088 - INFO - assign_placeholders=False
+2022-03-14 10:35:43,088 - INFO - visualize=False
+2022-03-14 10:35:43,088 - INFO - overwrite=True
+2022-03-14 10:35:43,088 - INFO - all_cartons=False
+2022-03-14 10:35:43,088 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:35:43,088 - INFO - versions=single
+2022-03-14 10:35:43,088 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:35:43,088 - INFO - unique_version=83
+2022-03-14 10:35:43,091 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-14 10:36:25,103 - INFO - Ran process_cartons using the following arguments
+
+2022-03-14 10:36:25,103 - INFO - origin=targetdb
+2022-03-14 10:36:25,103 - INFO -  
+2022-03-14 10:36:25,104 - INFO - files_folder=./files/
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - delim=|
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - return_differences=False
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - return_objects=False
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - write_input=True
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - write_output=True
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - assign_sets=True
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,104 - INFO - assign_placeholders=False
+2022-03-14 10:36:25,104 - INFO -  
+2022-03-14 10:36:25,105 - INFO - visualize=False
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - overwrite=True
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - all_cartons=False
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - versions=single
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,105 - INFO - unique_version=83
+2022-03-14 10:36:25,105 - INFO -  
+2022-03-14 10:36:25,107 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-14 10:38:44,851 - INFO - Ran process_cartons using the following arguments
+
+2022-03-14 10:38:44,851 - INFO - origin=targetdb
+2022-03-14 10:38:44,851 - INFO - files_folder=./files/
+2022-03-14 10:38:44,851 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:38:44,851 - INFO - delim=|
+2022-03-14 10:38:44,851 - INFO - return_differences=False
+2022-03-14 10:38:44,852 - INFO - return_objects=False
+2022-03-14 10:38:44,852 - INFO - write_input=True
+2022-03-14 10:38:44,852 - INFO - write_output=True
+2022-03-14 10:38:44,852 - INFO - assign_sets=True
+2022-03-14 10:38:44,852 - INFO - assign_placeholders=False
+2022-03-14 10:38:44,852 - INFO - visualize=False
+2022-03-14 10:38:44,852 - INFO - overwrite=True
+2022-03-14 10:38:44,852 - INFO - all_cartons=False
+2022-03-14 10:38:44,852 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:38:44,852 - INFO - versions=single
+2022-03-14 10:38:44,852 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:38:44,852 - INFO - unique_version=83
+2022-03-14 10:38:44,852 - INFO -  
+2022-03-14 10:38:44,855 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-14 10:42:32,631 - INFO - Ran process_cartons using the following arguments
+
+2022-03-14 10:42:32,632 - INFO - origin=targetdb
+2022-03-14 10:42:32,632 - INFO - files_folder=./files/
+2022-03-14 10:42:32,632 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:42:32,632 - INFO - delim=|
+2022-03-14 10:42:32,632 - INFO - return_differences=False
+2022-03-14 10:42:32,632 - INFO - return_objects=False
+2022-03-14 10:42:32,632 - INFO - write_input=True
+2022-03-14 10:42:32,632 - INFO - write_output=True
+2022-03-14 10:42:32,632 - INFO - assign_sets=True
+2022-03-14 10:42:32,632 - INFO - assign_placeholders=False
+2022-03-14 10:42:32,632 - INFO - visualize=False
+2022-03-14 10:42:32,632 - INFO - overwrite=True
+2022-03-14 10:42:32,632 - INFO - all_cartons=False
+2022-03-14 10:42:32,632 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:42:32,633 - INFO - versions=single
+2022-03-14 10:42:32,633 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:42:32,633 - INFO - unique_version=83
+2022-03-14 10:42:32,633 - INFO - 
+
+2022-03-14 10:42:32,635 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-14 10:46:02,623 - INFO - Ran process_cartons using the following arguments
+2022-03-14 10:46:02,624 - INFO - origin=targetdb
+2022-03-14 10:46:02,624 - INFO - files_folder=./files/
+2022-03-14 10:46:02,624 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:46:02,624 - INFO - delim=|
+2022-03-14 10:46:02,624 - INFO - return_differences=False
+2022-03-14 10:46:02,624 - INFO - return_objects=False
+2022-03-14 10:46:02,624 - INFO - write_input=True
+2022-03-14 10:46:02,624 - INFO - write_output=True
+2022-03-14 10:46:02,624 - INFO - assign_sets=True
+2022-03-14 10:46:02,624 - INFO - assign_placeholders=False
+2022-03-14 10:46:02,624 - INFO - visualize=False
+2022-03-14 10:46:02,624 - INFO - overwrite=True
+2022-03-14 10:46:02,624 - INFO - all_cartons=False
+2022-03-14 10:46:02,624 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:46:02,624 - INFO - versions=single
+2022-03-14 10:46:02,625 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:46:02,625 - INFO - unique_version=83
+2022-03-14 10:46:02,625 - INFO -  
+2022-03-14 10:46:02,627 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-14 10:48:46,898 - INFO - ############################################################
+2022-03-14 10:48:46,898 - INFO - Ran process_cartons using the following arguments
+2022-03-14 10:48:46,899 - INFO - origin=targetdb
+2022-03-14 10:48:46,899 - INFO - files_folder=./files/
+2022-03-14 10:48:46,899 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 10:48:46,899 - INFO - delim=|
+2022-03-14 10:48:46,899 - INFO - return_differences=False
+2022-03-14 10:48:46,899 - INFO - return_objects=False
+2022-03-14 10:48:46,899 - INFO - write_input=True
+2022-03-14 10:48:46,899 - INFO - write_output=True
+2022-03-14 10:48:46,899 - INFO - assign_sets=True
+2022-03-14 10:48:46,899 - INFO - assign_placeholders=False
+2022-03-14 10:48:46,899 - INFO - visualize=False
+2022-03-14 10:48:46,899 - INFO - overwrite=True
+2022-03-14 10:48:46,899 - INFO - all_cartons=False
+2022-03-14 10:48:46,899 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 10:48:46,899 - INFO - versions=single
+2022-03-14 10:48:46,900 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 10:48:46,900 - INFO - unique_version=83
+2022-03-14 10:48:46,900 - INFO -  
+2022-03-14 10:48:46,902 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt

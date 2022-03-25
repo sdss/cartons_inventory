@@ -1,0 +1,5 @@
+carton|plan|category_label|stage|active|program|version_pk|tag|mapper_pk|mapper_label|category_pk|cadence_pk|cadence_label|lambda_eff|instrument_pk|instrument_label|value_min|value_max|priority_min|priority_max
+bhm_rm_ancillary|0.1.0|science|N/A|N/A|bhm_rm|49|0.1.0|1|BHM|0|{3}|{'bright_1x3'}||||||1004|1049
+bhm_rm_core|0.5.0|science|N/A|N/A|bhm_rm|83|0.3.0|1|BHM|0|{40, 41}|{'dark_174x8', 'dark_100x8'}|{5400.0}|{0}|{'BOSS'}|1000.0|1000.0|907|1047
+bhm_rm_known-spec|0.1.0|science|N/A|N/A|bhm_rm|49|0.1.0|1|BHM|0|{3}|{'bright_1x3'}||||||1001|1051
+bhm_rm_var|0.1.0|science|N/A|N/A|bhm_rm|49|0.1.0|1|BHM|0|{3}|{'bright_1x3'}||||||1008|1038

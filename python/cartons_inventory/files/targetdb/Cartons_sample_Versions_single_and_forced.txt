@@ -1,4 +1,5 @@
 |            carton |  plan | category | stage | active |
-|  bhm_rm_ancillary | 0.5.0 |  science |   N/A |    N/A |
-| bhm_rm_known_spec | 0.5.0 |  science |   N/A |    N/A |
-|        bhm_rm_var | 0.5.0 |  science |   N/A |    N/A |
+|  bhm_rm_ancillary | 0.1.0 |  science |   N/A |    N/A |
+|       bhm_rm_core | 0.5.0 |  science |   N/A |    N/A |
+| bhm_rm_known-spec | 0.1.0 |  science |   N/A |    N/A |
+|        bhm_rm_var | 0.1.0 |  science |   N/A |    N/A |

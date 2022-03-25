@@ -309,10 +309,9 @@ class CartonInfo(object):
                         + res['category_label'].rjust(20) + ' |   N/A |    N/A |\n'
             for index in range(len(colnames)):
                 df_data[colnames[index]] = locals()[colnames[index]]
-
         if verbose is True and msg != '':
             log.debug(msg)
-
+            print(msg)
         df = pd.DataFrame(data=df_data)
         return df
 
@@ -450,8 +449,8 @@ def check_mag_outliers(datafr, bands, systems):
 
 
 def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
-                    delim='|', check_exists=True, verb=True, return_objects=False,
-                    write_input=False, write_output=True, assign_sets=True,
+                    delim='|', check_exists=False, verb=True, return_objects=False,
+                    write_input=False, write_output=False, assign_sets=False,
                     assign_placeholders=False, visualize=False, overwrite=False,
                     all_cartons=True, cartons_name_pattern=None, versions='latest',
                     forced_versions=None, unique_version=None):
@@ -658,7 +657,6 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
 
     # Here we start the corresponding log based on the origin, assign_sets,
     # and assign_placeholders value
-    print(f'./logs/origin_{origin}_sets_{assign_sets}_mags_{assign_placeholders}.log')
     log.start_file_logger(f'./logs/origin_{origin}_sets_{assign_sets}'
                           f'_mags_{assign_placeholders}.log')
     log.info('#' * 60)
@@ -724,10 +722,11 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
         # Here we assign sets and or mag placeholders info based on input arguments
         # And we visualize and write in output .csv if it corresponds
         if obj.in_targetdb is True:
-            obj.assign_target_info(calculate_sets=assign_sets,
-                                   calculate_mag_placeholders=assign_placeholders)
-            objects.append(obj)
-            log.info(f'Ran assign_target_info on carton {obj.carton}')
+            if assign_sets is True or assign_placeholders is True:
+                obj.assign_target_info(calculate_sets=assign_sets,
+                                       calculate_mag_placeholders=assign_placeholders)
+                objects.append(obj)
+                log.info(f'Ran assign_target_info on carton {obj.carton}')
 
             if visualize is True:
                 obj.visualize_content(log)
