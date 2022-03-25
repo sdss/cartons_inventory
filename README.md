@@ -1,8 +1,8 @@
 # cartons_inventory
 
 ![Versions](https://img.shields.io/badge/python->3.7-blue)
-[![Documentation Status](https://readthedocs.org/projects/sdss-cartons_inventory/badge/?version=latest)](https://sdss-cartons_inventory.readthedocs.io/en/latest/?badge=latest)
-[![Travis (.org)](https://img.shields.io/travis/sdss/cartons_inventory)](https://travis-ci.org/sdss/cartons_inventory)
-[![codecov](https://codecov.io/gh/sdss/cartons_inventory/branch/main/graph/badge.svg)](https://codecov.io/gh/sdss/cartons_inventory)
+[![Documentation Status](https://readthedocs.org/projects/cartons_inventory/badge/?version=latest)](https://cartons_inventory.readthedocs.io/en/latest/?badge=latest)
 
-Package to track SDSS cartons in database
+###Cartons\_inventory is package to track the content of SDSS cartons in targetdb database.
+
+It can take as an input an rsconfig file, a curstom file or a targetdb selection criteria.
