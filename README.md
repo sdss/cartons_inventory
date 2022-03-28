@@ -535,7 +535,7 @@ with multiple parameters and one entry for each target in the carton. For exampl
 'ops_apogee\_std' carton, and then we return the Pandas DataFrame corresponding to the targets in that carton. Once we have the DataFrame we can
 check information at the individual target level. For example, in here we calculate the average g-r and r-i colors for all the targets where gri
 magnitudes are available. If we want to analyze further the content of the carton we can save the DataFrame into a .csv file like here where we
-created file ['apogee\_standards\content.csv'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/apogee_standards_content.csv)
+created file ['apogee\_stds\_content.csv'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/apogee_stds_content.csv)
 (here we only saved the first 1000 rows to avoid uploading an unnecesarily large file).
 
 ```
