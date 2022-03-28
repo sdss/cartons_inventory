@@ -538,7 +538,7 @@ magnitudes are available. If we want to analyze further the content of the carto
 created file ['apogee\_standards\content.csv'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/apogee_standards_content.csv)
 (here we only saved the first 1000 rows to avoid uploading an unnecesarily large file).
 
-'''
+```
 [u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
 Python 3.7.7 (default, Mar 26 2020, 15:48:22) 
 Type 'copyright', 'credits' or 'license' for more information
@@ -554,6 +554,6 @@ In [4]: np.average((df['g']-df['r'])[ind_valid]), np.average((df['r']-df['i'])[i
 Out[4]: (0.19343229220832064, 0.11288633405227849)
 
 In [5]: df[:1000].to_csv('./files/custom/apogee_stds_content.csv')
-'''
+```
 
 ### 6 Saving the information from a group of cartons in a .csv file
