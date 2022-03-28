@@ -727,7 +727,8 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
 
             else:
                 objects.append(obj)
-                log.info(f'Appending object for carton {obj.carton} but without running assign_target_info')
+                log.info(f'Appending object for carton {obj.carton}'
+                         'but without running assign_target_info')
 
             if visualize is True:
                 obj.visualize_content(log)
