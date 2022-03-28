@@ -249,7 +249,7 @@ displayed on screen and in the log which by default is 140 but in this case we u
 Then, we get the target dependent information of the carton using the assign_target_info method with
 both arguments as True to calculate the parameter sets/ranges and the magnitude placeholders. Then, we run visualize_content()
 again and see the full information for this cartons which is also stored in our log file
-['uvex1.log'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/logs/uvex1.log)/
+['uvex1.log'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/logs/uvex1.log)
 
 ```
 [u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
@@ -324,6 +324,207 @@ In [5]: uvex1.visualize_content(log,width=120)
 [INFO]: ###                                                                                                                  ###
 [INFO]: ### magnitude_placeholders: {'TMASS_Invalid', 'SDSS_None', 'SDSS_-9999.0', 'SDSS_Invalid', 'GAIA_Invalid'}           ###
 [INFO]: ########################################################################################################################
+```
+In the second example of how to use the _visuzlize\_content_ method we will use it within the _process\_cartons_ method
+using _visualize_=True and the other arguments are the same as the ones used in the previous usage example, i.e. use the custom
+carton list ['mwm_uvex.txt'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/mwm_uvex.txt)
+to assign the sets/ranges for the target dependent parameters and the magnitude placeholders (only this time we wont return the
+objects since we are doing visual inspection). Since this time we are running
+within _process\_cartons_  there is no need to initialize the log file which is automatically created with the name
+['origin\_custom\_sets\_True\_mags\_True.log'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/logs/origin_custom_sets_True_mags_True.log)
+and it is written using the default column width of 140. This log file and the message displayed on screen show the content of each
+of these 5 cartons after calculating the target dependent parameter sets/ranges and the magnitude placeholders.
+
+```
+[u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
+Python 3.7.7 (default, Mar 26 2020, 15:48:22) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: process_cartons(origin='custom', inputname='mwm_uvex.txt', assign_sets=True, assign_placeholders=True, visualize=True)                                                                                
+[INFO]: ############################################################
+[INFO]: ###               STARTING CODE EXECUTION                ###
+[INFO]: ############################################################
+[INFO]: Ran process_cartons using the following arguments
+[INFO]: origin=custom
+[INFO]: files_folder=./files/
+[INFO]: inputname=mwm_uvex.txt
+[INFO]: delim=|
+[INFO]: check_exists=False
+[INFO]: verb=False
+[INFO]: return_objects=False
+[INFO]: write_input=False
+[INFO]: write_output=False
+[INFO]: assign_sets=True
+[INFO]: assign_placeholders=True
+[INFO]: visualize=True
+[INFO]: overwrite=False
+[INFO]: all_cartons=False
+[INFO]: cartons_name_pattern=None
+[INFO]: versions=latest
+[INFO]: forced_versions=None
+[INFO]: unique_version=None
+[INFO]:  
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex1
+[INFO]:  
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                    CARTON DEPENDENT INFORMATION                                                      ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### carton: mwm_cb_uvex1                                                                                                                 ###
+[INFO]: ### plan: 0.5.0                                                                                                                          ###
+[INFO]: ### category_label: science                                                                                                              ###
+[INFO]: ### stage: srd                                                                                                                           ###
+[INFO]: ### active: y                                                                                                                            ###
+[INFO]: ### in_targetdb: True                                                                                                                    ###
+[INFO]: ### program: mwm_cb                                                                                                                      ###
+[INFO]: ### version_pk: 83                                                                                                                       ###
+[INFO]: ### tag: 0.3.0                                                                                                                           ###
+[INFO]: ### mapper_pk: 0                                                                                                                         ###
+[INFO]: ### mapper_label: MWM                                                                                                                    ###
+[INFO]: ### category_pk: 0                                                                                                                       ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                VALUES PER TARGET DEPENDENT PARAMETER                                                 ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### cadence_pk: {32, 1, 31}                                                                                                              ###
+[INFO]: ### cadence_label: {'dark_1x3', 'dark_1x2', 'bright_1x1'}                                                                                ###
+[INFO]: ### lambda_eff: {5400.0}                                                                                                                 ###
+[INFO]: ### instrument_pk: {0}                                                                                                                   ###
+[INFO]: ### instrument_label: {'BOSS'}                                                                                                           ###
+[INFO]: ### value range: 1.0 to 3.0                                                                                                              ###
+[INFO]: ### priority range: 1400 to 1400                                                                                                         ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                            MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                             ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### magnitude_placeholders: {'SDSS_Invalid', 'TMASS_Invalid', 'SDSS_None', 'GAIA_Invalid', 'SDSS_-9999.0'}                               ###
+[INFO]: ############################################################################################################################################
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex2
+[INFO]:  
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                    CARTON DEPENDENT INFORMATION                                                      ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### carton: mwm_cb_uvex2                                                                                                                 ###
+[INFO]: ### plan: 0.5.0                                                                                                                          ###
+[INFO]: ### category_label: science                                                                                                              ###
+[INFO]: ### stage: srd                                                                                                                           ###
+[INFO]: ### active: y                                                                                                                            ###
+[INFO]: ### in_targetdb: True                                                                                                                    ###
+[INFO]: ### program: mwm_cb                                                                                                                      ###
+[INFO]: ### version_pk: 83                                                                                                                       ###
+[INFO]: ### tag: 0.3.0                                                                                                                           ###
+[INFO]: ### mapper_pk: 0                                                                                                                         ###
+[INFO]: ### mapper_label: MWM                                                                                                                    ###
+[INFO]: ### category_pk: 0                                                                                                                       ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                VALUES PER TARGET DEPENDENT PARAMETER                                                 ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### cadence_pk: {32, 1, 31}                                                                                                              ###
+[INFO]: ### cadence_label: {'dark_1x3', 'dark_1x2', 'bright_1x1'}                                                                                ###
+[INFO]: ### lambda_eff: {5400.0}                                                                                                                 ###
+[INFO]: ### instrument_pk: {0}                                                                                                                   ###
+[INFO]: ### instrument_label: {'BOSS'}                                                                                                           ###
+[INFO]: ### value range: 1.0 to 3.0                                                                                                              ###
+[INFO]: ### priority range: 1400 to 1400                                                                                                         ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                            MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                             ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### magnitude_placeholders: {'SDSS_Invalid', 'TMASS_Invalid', 'SDSS_None', 'GAIA_Invalid', 'SDSS_-9999.0'}                               ###
+[INFO]: ############################################################################################################################################
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex3
+[INFO]:  
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                    CARTON DEPENDENT INFORMATION                                                      ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### carton: mwm_cb_uvex3                                                                                                                 ###
+[INFO]: ### plan: 0.5.0                                                                                                                          ###
+[INFO]: ### category_label: science                                                                                                              ###
+[INFO]: ### stage: srd                                                                                                                           ###
+[INFO]: ### active: y                                                                                                                            ###
+[INFO]: ### in_targetdb: True                                                                                                                    ###
+[INFO]: ### program: mwm_cb                                                                                                                      ###
+[INFO]: ### version_pk: 83                                                                                                                       ###
+[INFO]: ### tag: 0.3.0                                                                                                                           ###
+[INFO]: ### mapper_pk: 0                                                                                                                         ###
+[INFO]: ### mapper_label: MWM                                                                                                                    ###
+[INFO]: ### category_pk: 0                                                                                                                       ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                VALUES PER TARGET DEPENDENT PARAMETER                                                 ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### cadence_pk: {32, 1, 31}                                                                                                              ###
+[INFO]: ### cadence_label: {'dark_1x3', 'dark_1x2', 'bright_1x1'}                                                                                ###
+[INFO]: ### lambda_eff: {5400.0}                                                                                                                 ###
+[INFO]: ### instrument_pk: {0}                                                                                                                   ###
+[INFO]: ### instrument_label: {'BOSS'}                                                                                                           ###
+[INFO]: ### value range: 1.0 to 3.0                                                                                                              ###
+[INFO]: ### priority range: 1400 to 1400                                                                                                         ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                            MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                             ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### magnitude_placeholders: {'SDSS_Invalid', 'SDSS_None', 'GAIA_Invalid', 'TMASS_Invalid'}                                               ###
+[INFO]: ############################################################################################################################################
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex4
+[INFO]:  
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                    CARTON DEPENDENT INFORMATION                                                      ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### carton: mwm_cb_uvex4                                                                                                                 ###
+[INFO]: ### plan: 0.5.0                                                                                                                          ###
+[INFO]: ### category_label: science                                                                                                              ###
+[INFO]: ### stage: srd                                                                                                                           ###
+[INFO]: ### active: y                                                                                                                            ###
+[INFO]: ### in_targetdb: True                                                                                                                    ###
+[INFO]: ### program: mwm_cb                                                                                                                      ###
+[INFO]: ### version_pk: 83                                                                                                                       ###
+[INFO]: ### tag: 0.3.0                                                                                                                           ###
+[INFO]: ### mapper_pk: 0                                                                                                                         ###
+[INFO]: ### mapper_label: MWM                                                                                                                    ###
+[INFO]: ### category_pk: 0                                                                                                                       ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                VALUES PER TARGET DEPENDENT PARAMETER                                                 ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### cadence_pk: {32, 1, 31}                                                                                                              ###
+[INFO]: ### cadence_label: {'dark_1x3', 'dark_1x2', 'bright_1x1'}                                                                                ###
+[INFO]: ### lambda_eff: {5400.0}                                                                                                                 ###
+[INFO]: ### instrument_pk: {0}                                                                                                                   ###
+[INFO]: ### instrument_label: {'BOSS'}                                                                                                           ###
+[INFO]: ### value range: 1.0 to 3.0                                                                                                              ###
+[INFO]: ### priority range: 1400 to 1400                                                                                                         ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                            MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                             ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### magnitude_placeholders: {'SDSS_Invalid', 'TMASS_Invalid', 'SDSS_None', 'GAIA_Invalid', 'SDSS_-9999.0'}                               ###
+[INFO]: ############################################################################################################################################
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex5
+[INFO]:  
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                    CARTON DEPENDENT INFORMATION                                                      ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### carton: mwm_cb_uvex5                                                                                                                 ###
+[INFO]: ### plan: 0.5.0                                                                                                                          ###
+[INFO]: ### category_label: science                                                                                                              ###
+[INFO]: ### stage: srd                                                                                                                           ###
+[INFO]: ### active: y                                                                                                                            ###
+[INFO]: ### in_targetdb: True                                                                                                                    ###
+[INFO]: ### program: mwm_cb                                                                                                                      ###
+[INFO]: ### version_pk: 83                                                                                                                       ###
+[INFO]: ### tag: 0.3.0                                                                                                                           ###
+[INFO]: ### mapper_pk: 0                                                                                                                         ###
+[INFO]: ### mapper_label: MWM                                                                                                                    ###
+[INFO]: ### category_pk: 0                                                                                                                       ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                                VALUES PER TARGET DEPENDENT PARAMETER                                                 ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### cadence_pk: {10}                                                                                                                     ###
+[INFO]: ### cadence_label: {'bright_3x1'}                                                                                                        ###
+[INFO]: ### lambda_eff: {16000.0}                                                                                                                ###
+[INFO]: ### instrument_pk: {1}                                                                                                                   ###
+[INFO]: ### instrument_label: {'APOGEE'}                                                                                                         ###
+[INFO]: ### value range: 3.0 to 3.0                                                                                                              ###
+[INFO]: ### priority range: 1400 to 1400                                                                                                         ###
+[INFO]: ############################################################################################################################################
+[INFO]: ###                                            MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                             ###
+[INFO]: ###                                                                                                                                      ###
+[INFO]: ### magnitude_placeholders: {'SDSS_Invalid', 'SDSS_None', 'SDSS_-9999.0'}                                                                ###
+[INFO]: ############################################################################################################################################
 ```
 
 ### 5 Getting a dataframe with all the targets from a carton
