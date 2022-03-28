@@ -232,3 +232,100 @@ Out[3]:
   'SDSS_None',
   'TMASS_Invalid'})
 ```
+
+### 4 Visualizing the content of cartons
+
+If one wants to have a human-readable representation of the content of a carton one can use the _visualize\_content_ method.
+Here we show to examples on how to use this method, outside and inside _process\_cartons_. In the first example we 'manually'
+create the 'uvex1' CartonInfo object corresponding to carton='mwm\_cb\_uvex1', _plan_='0.5.0', and _category\_label_='science'.
+Then, we check the content right after instantiation using _visualize\_content_ which indicates us that only the carton dependent
+information has been determined for this carton. The method _visualize\_content_ is meant to print and save in log the resulting information
+so one has to give as an input an SDSS log object which is defined as 'log' in cartons\_inventory. When running _visualize\_content_
+inside the _process\_cartons_ method the log file is initialized with a name based on the input arguments of _process\_cartons_,
+but to run it outside _process\_cartons_ one has to initialize the log file doing "log.start_file_logger(\{logfilename\}) which in
+this case is ['uvex1.log'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/logs/uvex1.log).
+The method _visualize\_content_ also uses the optional parameter _width_ to set the width of the message
+displayed on screen and in the log which by default is 140 but in this case we used 120.
+Then, we get the target dependent information of the carton using the assign_target_info method with
+both arguments as True to calculate the parameter sets/ranges and the magnitude placeholders. Then, we run visualize_content()
+again and see the full information for this cartons which is also stored in our log file
+['uvex1.log'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/logs/uvex1.log)/
+
+```
+[u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
+Python 3.7.7 (default, Mar 26 2020, 15:48:22) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: uvex1=CartonInfo('mwm_cb_uvex1','0.5.0','science')                                                                                                                                                    
+
+In [2]: log.start_file_logger('./logs/uvex1.log')                                                                                                                                                             
+
+In [3]: uvex1.visualize_content(log,width=120)                                                                                                                                                                
+[INFO]:  
+[INFO]: ########################################################################################################################
+[INFO]: ###                                          CARTON DEPENDENT INFORMATION                                            ###
+[INFO]: ###                                                                                                                  ###
+[INFO]: ### carton: mwm_cb_uvex1                                                                                             ###
+[INFO]: ### plan: 0.5.0                                                                                                      ###
+[INFO]: ### category_label: science                                                                                          ###
+[INFO]: ### stage: N/A                                                                                                       ###
+[INFO]: ### active: N/A                                                                                                      ###
+[INFO]: ### in_targetdb: True                                                                                                ###
+[INFO]: ### program: mwm_cb                                                                                                  ###
+[INFO]: ### version_pk: 83                                                                                                   ###
+[INFO]: ### tag: 0.3.0                                                                                                       ###
+[INFO]: ### mapper_pk: 0                                                                                                     ###
+[INFO]: ### mapper_label: MWM                                                                                                ###
+[INFO]: ### category_pk: 0                                                                                                   ###
+[INFO]: ########################################################################################################################
+[INFO]: ###                                   The list of values par target parameter has                                    ###
+[INFO]: ###                                  not been calculated for this carton, to do so                                   ###
+[INFO]: ###                                   first run assign_target_info on this carton                                    ###
+[INFO]: ###                                       using calculate_sets=True (default)                                        ###
+[INFO]: ########################################################################################################################
+[INFO]: ###                                The list of mag placeholers for each photometric                                  ###
+[INFO]: ###                               system has not been calculated for this carton yet,                                ###
+[INFO]: ###                              to do so first run assign_target_info on this carton                                ###
+[INFO]: ###                                using calculate_mag_placeholers=True (not default)                                ###
+[INFO]: ########################################################################################################################
+
+In [4]: uvex1.assign_target_info(True,True)                                                                                                                                                                   
+
+In [5]: uvex1.visualize_content(log,width=120)                                                                                                                                                                
+[INFO]:  
+[INFO]: ########################################################################################################################
+[INFO]: ###                                          CARTON DEPENDENT INFORMATION                                            ###
+[INFO]: ###                                                                                                                  ###
+[INFO]: ### carton: mwm_cb_uvex1                                                                                             ###
+[INFO]: ### plan: 0.5.0                                                                                                      ###
+[INFO]: ### category_label: science                                                                                          ###
+[INFO]: ### stage: N/A                                                                                                       ###
+[INFO]: ### active: N/A                                                                                                      ###
+[INFO]: ### in_targetdb: True                                                                                                ###
+[INFO]: ### program: mwm_cb                                                                                                  ###
+[INFO]: ### version_pk: 83                                                                                                   ###
+[INFO]: ### tag: 0.3.0                                                                                                       ###
+[INFO]: ### mapper_pk: 0                                                                                                     ###
+[INFO]: ### mapper_label: MWM                                                                                                ###
+[INFO]: ### category_pk: 0                                                                                                   ###
+[INFO]: ########################################################################################################################
+[INFO]: ###                                      VALUES PER TARGET DEPENDENT PARAMETER                                       ###
+[INFO]: ###                                                                                                                  ###
+[INFO]: ### cadence_pk: {32, 1, 31}                                                                                          ###
+[INFO]: ### cadence_label: {'dark_1x2', 'bright_1x1', 'dark_1x3'}                                                            ###
+[INFO]: ### lambda_eff: {5400.0}                                                                                             ###
+[INFO]: ### instrument_pk: {0}                                                                                               ###
+[INFO]: ### instrument_label: {'BOSS'}                                                                                       ###
+[INFO]: ### value range: 1.0 to 3.0                                                                                          ###
+[INFO]: ### priority range: 1400 to 1400                                                                                     ###
+[INFO]: ########################################################################################################################
+[INFO]: ###                                  MAGNITUDE PLACEHOLDERS PER PHOTOMETRIC SYSTEM                                   ###
+[INFO]: ###                                                                                                                  ###
+[INFO]: ### magnitude_placeholders: {'TMASS_Invalid', 'SDSS_None', 'SDSS_-9999.0', 'SDSS_Invalid', 'GAIA_Invalid'}           ###
+[INFO]: ########################################################################################################################
+```
+
+### 5 Getting a dataframe with all the targets from a carton
+
+### 6 Saving the information from a group of cartons in a .csv file
