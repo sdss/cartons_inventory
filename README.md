@@ -172,7 +172,8 @@ objects parameter one has to set _assign\_sets_=True.
 The other target dependent parameter that can be calculated are maGnitude placeholders used for each photometric system (SDSS, 2MASS, GAIA). The type of outliers are:
 None (For empty entries), Invalid (For Nan's and infinite values), and \{Number\} (For values brighter than -9, dimmer than 50, or equal to zero), in the latter cases the number itself is returned
 as the outlier type. To calculate magnitude outliers the user has to use _assign\_placeholders_=True.
-In the following block we show an example in which we assign both the target dependent sets/ranges and the magnitude placeholders for a custom list of mwm\_cb\_uvex cartons, called 'mwm\_uvex.txt'.
+In the following block we show an example in which we assign both the target dependent sets/ranges and the magnitude placeholders for a custom list of mwm\_cb\_uvex cartons, called
+['mwm\_uvex.txt'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/mwm_uvex.txt).
 In this case we also use _return\_objects_=True which in principle is optional but given that we are not saving the output .csv file (_write\_output_=False), is the only practical way to retrieve
 the information from these cartons.
 At the end of this example we see that 5 CartonInfo objects are returned, one for each carton, and that the first object corresponds to carton='mwm\_cb\_uvex1', which has as magnitude placeholders
