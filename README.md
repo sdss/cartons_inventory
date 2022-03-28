@@ -557,3 +557,52 @@ In [5]: df[:1000].to_csv('./files/custom/apogee_stds_content.csv')
 ```
 
 ### 6 Saving the information from a group of cartons in a .csv file
+
+If we want to store the information from a group of cartons in a .csv file we can use _process\_cartons_ with the argument _write\_output_=True.
+In the following example we create file ['Info\_cartons-0.5.3\_sets.csv'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/rsconfig/Info_cartons-0.5.3_sets.csv)
+with the cartons dependent information and the target dependent parameters sets/ranges. In this case we only used _assign\_sets_=True and _overwrite_=True but we could have
+also used True for _return\_objects_, _verb_, _assign\_placeholders_, and _visualize_, to mix the different usages of cartons\_inventory.
+
+```
+In [1]: process_cartons(origin='rsconfig',inputname='cartons-0.5.3.txt',write_output=True,assign_sets=True,overwrite=True)                                                                                      
+[INFO]: ############################################################
+[INFO]: ###               STARTING CODE EXECUTION                ###
+[INFO]: ############################################################
+[INFO]: Ran process_cartons using the following arguments
+[INFO]: origin=rsconfig
+[INFO]: files_folder=./files/
+[INFO]: inputname=cartons-0.5.3.txt
+[INFO]: delim=|
+[INFO]: check_exists=False
+[INFO]: verb=False
+[INFO]: return_objects=False
+[INFO]: write_input=False
+[INFO]: write_output=True
+[INFO]: assign_sets=True
+[INFO]: assign_placeholders=False
+[INFO]: visualize=False
+[INFO]: overwrite=True
+[INFO]: all_cartons=False
+[INFO]: cartons_name_pattern=None
+[INFO]: versions=latest
+[INFO]: forced_versions=None
+[INFO]: unique_version=None
+[INFO]:  
+[INFO]: Ran assign_target_info on carton bhm_aqmes_bonus_bright
+[INFO]: wrote row to output csv for carton=bhm_aqmes_bonus_bright (1/150)
+[INFO]: Ran assign_target_info on carton bhm_aqmes_bonus_core
+[INFO]: wrote row to output csv for carton=bhm_aqmes_bonus_core (2/150)
+[INFO]: Ran assign_target_info on carton bhm_aqmes_bonus_faint
+[INFO]: wrote row to output csv for carton=bhm_aqmes_bonus_faint (3/150)
+[INFO]: Ran assign_target_info on carton bhm_aqmes_med
+[INFO]: wrote row to output csv for carton=bhm_aqmes_med (4/150)
+. . .
+. . .
+. . .
+[INFO]: Ran assign_target_info on ops_std_eboss
+[INFO]: wrote row to output csv for carton=ops_std_eboss (149/150)
+[INFO]: Ran assign_target_info on ops_tycho2_brightneighbors
+[INFO]: wrote row to output csv for carton=ops_tycho2_brightneighbors (150/150)
+[INFO]: Wrote file ./files/rsconfig/Info_cartons-0.5.3_sets.csv
+```
+

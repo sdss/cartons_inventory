@@ -1,0 +1,320 @@
+2022-03-14 18:13:11,325 - INFO - ############################################################
+2022-03-14 18:13:11,327 - INFO - ###               STARTING CODE EXECUTION                ###
+2022-03-14 18:13:11,327 - INFO - ############################################################
+2022-03-14 18:13:11,327 - INFO - Ran process_cartons using the following arguments
+2022-03-14 18:13:11,327 - INFO - origin=rsconfig
+2022-03-14 18:13:11,327 - INFO - files_folder=./files/
+2022-03-14 18:13:11,327 - INFO - inputname=cartons-0.5.3.txt
+2022-03-14 18:13:11,327 - INFO - delim=|
+2022-03-14 18:13:11,327 - INFO - check_exists=False
+2022-03-14 18:13:11,327 - INFO - verb=True
+2022-03-14 18:13:11,328 - INFO - return_objects=False
+2022-03-14 18:13:11,328 - INFO - write_input=False
+2022-03-14 18:13:11,328 - INFO - write_output=True
+2022-03-14 18:13:11,328 - INFO - assign_sets=True
+2022-03-14 18:13:11,328 - INFO - assign_placeholders=False
+2022-03-14 18:13:11,328 - INFO - visualize=False
+2022-03-14 18:13:11,328 - INFO - overwrite=True
+2022-03-14 18:13:11,328 - INFO - all_cartons=False
+2022-03-14 18:13:11,328 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-14 18:13:11,328 - INFO - versions=single
+2022-03-14 18:13:11,328 - INFO - forced_versions={'bhm_rm_core': 48}
+2022-03-14 18:13:11,328 - INFO - unique_version=83
+2022-03-14 18:13:11,328 - INFO -  
+2022-03-14 18:13:11,894 - INFO - Ran assign_target_info on carton bhm_aqmes_bonus_bright
+2022-03-14 18:13:11,894 - INFO - wrote row to output csv for carton=bhm_aqmes_bonus_bright (1/150)
+2022-03-14 18:13:14,073 - INFO - Ran assign_target_info on carton bhm_aqmes_bonus_core
+2022-03-14 18:13:14,073 - INFO - wrote row to output csv for carton=bhm_aqmes_bonus_core (2/150)
+2022-03-14 18:13:23,774 - INFO - Ran assign_target_info on carton bhm_aqmes_bonus_faint
+2022-03-14 18:13:23,774 - INFO - wrote row to output csv for carton=bhm_aqmes_bonus_faint (3/150)
+2022-03-14 18:13:24,115 - INFO - Ran assign_target_info on carton bhm_aqmes_med
+2022-03-14 18:13:24,115 - INFO - wrote row to output csv for carton=bhm_aqmes_med (4/150)
+2022-03-14 18:13:24,788 - INFO - Ran assign_target_info on carton bhm_aqmes_med_faint
+2022-03-14 18:13:24,788 - INFO - wrote row to output csv for carton=bhm_aqmes_med_faint (5/150)
+2022-03-14 18:13:25,598 - INFO - Ran assign_target_info on carton bhm_aqmes_wide2
+2022-03-14 18:13:25,598 - INFO - wrote row to output csv for carton=bhm_aqmes_wide2 (6/150)
+2022-03-14 18:13:28,048 - INFO - Ran assign_target_info on carton bhm_aqmes_wide2_faint
+2022-03-14 18:13:28,048 - INFO - wrote row to output csv for carton=bhm_aqmes_wide2_faint (7/150)
+2022-03-14 18:13:29,420 - INFO - Ran assign_target_info on carton bhm_csc_apogee
+2022-03-14 18:13:29,421 - INFO - wrote row to output csv for carton=bhm_csc_apogee (8/150)
+2022-03-14 18:13:32,315 - INFO - Ran assign_target_info on carton bhm_csc_boss
+2022-03-14 18:13:32,315 - INFO - wrote row to output csv for carton=bhm_csc_boss (9/150)
+2022-03-14 18:13:33,095 - INFO - Ran assign_target_info on carton bhm_csc_boss_bright
+2022-03-14 18:13:33,095 - INFO - wrote row to output csv for carton=bhm_csc_boss_bright (10/150)
+2022-03-14 18:13:34,791 - INFO - Ran assign_target_info on carton bhm_csc_boss_dark
+2022-03-14 18:13:34,791 - INFO - wrote row to output csv for carton=bhm_csc_boss_dark (11/150)
+2022-03-14 18:16:23,746 - INFO - Ran assign_target_info on carton bhm_colr_galaxies_lsdr8
+2022-03-14 18:16:23,746 - INFO - wrote row to output csv for carton=bhm_colr_galaxies_lsdr8 (12/150)
+2022-03-14 18:16:29,758 - INFO - Ran assign_target_info on carton bhm_gua_bright
+2022-03-14 18:16:29,759 - INFO - wrote row to output csv for carton=bhm_gua_bright (13/150)
+2022-03-14 18:17:17,699 - INFO - Ran assign_target_info on carton bhm_gua_dark
+2022-03-14 18:17:17,699 - INFO - wrote row to output csv for carton=bhm_gua_dark (14/150)
+2022-03-14 18:17:17,995 - INFO - Ran assign_target_info on carton bhm_rm_ancillary
+2022-03-14 18:17:17,995 - INFO - wrote row to output csv for carton=bhm_rm_ancillary (15/150)
+2022-03-14 18:17:18,344 - INFO - Ran assign_target_info on carton bhm_rm_core
+2022-03-14 18:17:18,344 - INFO - wrote row to output csv for carton=bhm_rm_core (16/150)
+2022-03-14 18:17:18,680 - INFO - Ran assign_target_info on carton bhm_rm_known_spec
+2022-03-14 18:17:18,680 - INFO - wrote row to output csv for carton=bhm_rm_known_spec (17/150)
+2022-03-14 18:17:18,973 - INFO - Ran assign_target_info on carton bhm_rm_var
+2022-03-14 18:17:18,973 - INFO - wrote row to output csv for carton=bhm_rm_var (18/150)
+2022-03-14 18:17:19,584 - INFO - Ran assign_target_info on carton bhm_spiders_agn_efeds_stragglers
+2022-03-14 18:17:19,584 - INFO - wrote row to output csv for carton=bhm_spiders_agn_efeds_stragglers (19/150)
+2022-03-14 18:17:27,261 - INFO - Ran assign_target_info on carton bhm_spiders_agn_gaiadr2
+2022-03-14 18:17:27,262 - INFO - wrote row to output csv for carton=bhm_spiders_agn_gaiadr2 (20/150)
+2022-03-14 18:17:32,745 - INFO - Ran assign_target_info on carton bhm_spiders_agn_lsdr8
+2022-03-14 18:17:32,745 - INFO - wrote row to output csv for carton=bhm_spiders_agn_lsdr8 (21/150)
+2022-03-14 18:17:37,448 - INFO - Ran assign_target_info on carton bhm_spiders_agn_ps1dr2
+2022-03-14 18:17:37,448 - INFO - wrote row to output csv for carton=bhm_spiders_agn_ps1dr2 (22/150)
+2022-03-14 18:17:37,738 - INFO - Ran assign_target_info on carton bhm_spiders_agn_sep
+2022-03-14 18:17:37,739 - INFO - wrote row to output csv for carton=bhm_spiders_agn_sep (23/150)
+2022-03-14 18:17:39,930 - INFO - Ran assign_target_info on carton bhm_spiders_agn_skymapperdr2
+2022-03-14 18:17:39,931 - INFO - wrote row to output csv for carton=bhm_spiders_agn_skymapperdr2 (24/150)
+2022-03-14 18:17:49,570 - INFO - Ran assign_target_info on carton bhm_spiders_agn_supercosmos
+2022-03-14 18:17:49,570 - INFO - wrote row to output csv for carton=bhm_spiders_agn_supercosmos (25/150)
+2022-03-14 18:17:49,907 - INFO - Ran assign_target_info on carton bhm_spiders_clusters_efeds_stragglers
+2022-03-14 18:17:49,907 - INFO - wrote row to output csv for carton=bhm_spiders_clusters_efeds_stragglers (26/150)
+2022-03-14 18:17:52,125 - INFO - Ran assign_target_info on carton bhm_spiders_clusters_lsdr8
+2022-03-14 18:17:52,125 - INFO - wrote row to output csv for carton=bhm_spiders_clusters_lsdr8 (27/150)
+2022-03-14 18:17:54,157 - INFO - Ran assign_target_info on carton bhm_spiders_clusters_ps1dr2
+2022-03-14 18:17:54,157 - INFO - wrote row to output csv for carton=bhm_spiders_clusters_ps1dr2 (28/150)
+2022-03-14 18:17:54,696 - INFO - Ran assign_target_info on carton manual_bhm_spiders_comm
+2022-03-14 18:17:54,697 - INFO - wrote row to output csv for carton=manual_bhm_spiders_comm (29/150)
+2022-03-14 18:17:58,331 - INFO - Ran assign_target_info on carton manual_bright_target_offsets_1
+2022-03-14 18:17:58,332 - INFO - wrote row to output csv for carton=manual_bright_target_offsets_1 (30/150)
+2022-03-14 18:17:59,389 - INFO - Ran assign_target_info on carton manual_bright_target_offsets_1_g13
+2022-03-14 18:17:59,389 - INFO - wrote row to output csv for carton=manual_bright_target_offsets_1_g13 (31/150)
+2022-03-14 18:18:03,027 - INFO - Ran assign_target_info on carton manual_bright_target_offsets_2
+2022-03-14 18:18:03,027 - INFO - wrote row to output csv for carton=manual_bright_target_offsets_2 (32/150)
+2022-03-14 18:18:04,083 - INFO - Ran assign_target_info on carton manual_bright_target_offsets_2_g13
+2022-03-14 18:18:04,084 - INFO - wrote row to output csv for carton=manual_bright_target_offsets_2_g13 (33/150)
+2022-03-14 18:18:07,707 - INFO - Ran assign_target_info on carton manual_bright_targets
+2022-03-14 18:18:07,707 - INFO - wrote row to output csv for carton=manual_bright_targets (34/150)
+2022-03-14 18:18:08,767 - INFO - Ran assign_target_info on carton manual_bright_targets_g13
+2022-03-14 18:18:08,767 - INFO - wrote row to output csv for carton=manual_bright_targets_g13 (35/150)
+2022-03-14 18:18:09,827 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_1
+2022-03-14 18:18:09,827 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_1 (36/150)
+2022-03-14 18:18:10,885 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_2
+2022-03-14 18:18:10,885 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_2 (37/150)
+2022-03-14 18:18:11,942 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_3
+2022-03-14 18:18:11,942 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_3 (38/150)
+2022-03-14 18:18:13,004 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_4
+2022-03-14 18:18:13,004 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_4 (39/150)
+2022-03-14 18:18:14,067 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_5
+2022-03-14 18:18:14,067 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_5 (40/150)
+2022-03-14 18:18:15,127 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_6
+2022-03-14 18:18:15,128 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_6 (41/150)
+2022-03-14 18:18:16,190 - INFO - Ran assign_target_info on carton manual_bright_targets_g13_offset_fixed_7
+2022-03-14 18:18:16,191 - INFO - wrote row to output csv for carton=manual_bright_targets_g13_offset_fixed_7 (42/150)
+2022-03-14 18:18:17,467 - INFO - Ran assign_target_info on carton manual_fps_position_stars
+2022-03-14 18:18:17,467 - INFO - wrote row to output csv for carton=manual_fps_position_stars (43/150)
+2022-03-14 18:18:17,745 - INFO - Ran assign_target_info on carton manual_nsbh_apogee
+2022-03-14 18:18:17,745 - INFO - wrote row to output csv for carton=manual_nsbh_apogee (44/150)
+2022-03-14 18:18:18,025 - INFO - Ran assign_target_info on carton manual_nsbh_boss
+2022-03-14 18:18:18,025 - INFO - wrote row to output csv for carton=manual_nsbh_boss (45/150)
+2022-03-14 18:18:18,307 - INFO - Ran assign_target_info on carton manual_mwm_tess_ob
+2022-03-14 18:18:18,307 - INFO - wrote row to output csv for carton=manual_mwm_tess_ob (46/150)
+2022-03-14 18:18:18,972 - INFO - Ran assign_target_info on carton mwm_cb_300pc_apogee
+2022-03-14 18:18:18,973 - INFO - wrote row to output csv for carton=mwm_cb_300pc_apogee (47/150)
+2022-03-14 18:18:20,397 - INFO - Ran assign_target_info on carton mwm_cb_300pc_boss
+2022-03-14 18:18:20,398 - INFO - wrote row to output csv for carton=mwm_cb_300pc_boss (48/150)
+2022-03-14 18:18:20,673 - INFO - Ran assign_target_info on carton mwm_cb_cvcandidates_apogee
+2022-03-14 18:18:20,673 - INFO - wrote row to output csv for carton=mwm_cb_cvcandidates_apogee (49/150)
+2022-03-14 18:18:21,054 - INFO - Ran assign_target_info on carton mwm_cb_cvcandidates_boss
+2022-03-14 18:18:21,054 - INFO - wrote row to output csv for carton=mwm_cb_cvcandidates_boss (50/150)
+2022-03-14 18:18:21,695 - INFO - Ran assign_target_info on carton mwm_cb_gaiagalex_apogee
+2022-03-14 18:18:21,695 - INFO - wrote row to output csv for carton=mwm_cb_gaiagalex_apogee (51/150)
+2022-03-14 18:18:28,005 - INFO - Ran assign_target_info on carton mwm_cb_gaiagalex_boss
+2022-03-14 18:18:28,005 - INFO - wrote row to output csv for carton=mwm_cb_gaiagalex_boss (52/150)
+2022-03-14 18:18:30,720 - INFO - Ran assign_target_info on carton mwm_cb_uvex1
+2022-03-14 18:18:30,720 - INFO - wrote row to output csv for carton=mwm_cb_uvex1 (53/150)
+2022-03-14 18:18:36,872 - INFO - Ran assign_target_info on carton mwm_cb_uvex2
+2022-03-14 18:18:36,873 - INFO - wrote row to output csv for carton=mwm_cb_uvex2 (54/150)
+2022-03-14 18:18:37,656 - INFO - Ran assign_target_info on carton mwm_cb_uvex3
+2022-03-14 18:18:37,656 - INFO - wrote row to output csv for carton=mwm_cb_uvex3 (55/150)
+2022-03-14 18:18:38,368 - INFO - Ran assign_target_info on carton mwm_cb_uvex4
+2022-03-14 18:18:38,368 - INFO - wrote row to output csv for carton=mwm_cb_uvex4 (56/150)
+2022-03-14 18:18:38,833 - INFO - Ran assign_target_info on carton mwm_cb_uvex5
+2022-03-14 18:18:38,834 - INFO - wrote row to output csv for carton=mwm_cb_uvex5 (57/150)
+2022-03-14 18:18:40,549 - INFO - Ran assign_target_info on carton mwm_dust_core
+2022-03-14 18:18:40,549 - INFO - wrote row to output csv for carton=mwm_dust_core (58/150)
+2022-03-14 18:18:42,543 - INFO - Ran assign_target_info on carton mwm_erosita_compact_gen
+2022-03-14 18:18:42,544 - INFO - wrote row to output csv for carton=mwm_erosita_compact_gen (59/150)
+2022-03-14 18:18:43,174 - INFO - Ran assign_target_info on carton mwm_erosita_compact_var
+2022-03-14 18:18:43,175 - INFO - wrote row to output csv for carton=mwm_erosita_compact_var (60/150)
+2022-03-14 18:18:45,515 - INFO - Ran assign_target_info on carton mwm_erosita_stars
+2022-03-14 18:18:45,515 - INFO - wrote row to output csv for carton=mwm_erosita_stars (61/150)
+2022-03-14 18:20:52,682 - INFO - Ran assign_target_info on carton mwm_galactic_core
+2022-03-14 18:20:52,682 - INFO - wrote row to output csv for carton=mwm_galactic_core (62/150)
+2022-03-14 18:20:57,818 - INFO - Ran assign_target_info on carton mwm_legacy_ir2opt
+2022-03-14 18:20:57,819 - INFO - wrote row to output csv for carton=mwm_legacy_ir2opt (65/150)
+2022-03-14 18:20:58,146 - INFO - Ran assign_target_info on carton mwm_ob_cepheids
+2022-03-14 18:20:58,147 - INFO - wrote row to output csv for carton=mwm_ob_cepheids (66/150)
+2022-03-14 18:21:12,326 - INFO - Ran assign_target_info on carton mwm_ob_core
+2022-03-14 18:21:12,326 - INFO - wrote row to output csv for carton=mwm_ob_core (67/150)
+2022-03-14 18:21:15,141 - INFO - Ran assign_target_info on carton mwm_rv_long_fps
+2022-03-14 18:21:15,142 - INFO - wrote row to output csv for carton=mwm_rv_long_fps (68/150)
+2022-03-14 18:23:42,839 - INFO - Ran assign_target_info on carton mwm_rv_short_fps
+2022-03-14 18:23:42,839 - INFO - wrote row to output csv for carton=mwm_rv_short_fps (69/150)
+2022-03-14 18:23:45,740 - INFO - Ran assign_target_info on carton mwm_snc_100pc_apogee
+2022-03-14 18:23:45,740 - INFO - wrote row to output csv for carton=mwm_snc_100pc_apogee (70/150)
+2022-03-14 18:23:53,339 - INFO - Ran assign_target_info on carton mwm_snc_100pc_boss
+2022-03-14 18:23:53,339 - INFO - wrote row to output csv for carton=mwm_snc_100pc_boss (71/150)
+2022-03-14 18:24:02,924 - INFO - Ran assign_target_info on carton mwm_snc_250pc_apogee
+2022-03-14 18:24:02,924 - INFO - wrote row to output csv for carton=mwm_snc_250pc_apogee (72/150)
+2022-03-14 18:24:12,892 - INFO - Ran assign_target_info on carton mwm_snc_250pc_boss
+2022-03-14 18:24:12,893 - INFO - wrote row to output csv for carton=mwm_snc_250pc_boss (73/150)
+2022-03-14 18:24:13,176 - INFO - Ran assign_target_info on carton mwm_tess_ob
+2022-03-14 18:24:13,176 - INFO - wrote row to output csv for carton=mwm_tess_ob (74/150)
+2022-03-14 18:24:18,608 - INFO - Ran assign_target_info on carton mwm_tess_planet
+2022-03-14 18:24:18,608 - INFO - wrote row to output csv for carton=mwm_tess_planet (75/150)
+2022-03-14 18:24:42,250 - INFO - Ran assign_target_info on carton mwm_tessrgb_core
+2022-03-14 18:24:42,250 - INFO - wrote row to output csv for carton=mwm_tessrgb_core (76/150)
+2022-03-14 18:24:46,659 - INFO - Ran assign_target_info on carton mwm_wd_core
+2022-03-14 18:24:46,660 - INFO - wrote row to output csv for carton=mwm_wd_core (77/150)
+2022-03-14 18:24:47,966 - INFO - Ran assign_target_info on carton mwm_yso_cluster_apogee
+2022-03-14 18:24:47,966 - INFO - wrote row to output csv for carton=mwm_yso_cluster_apogee (78/150)
+2022-03-14 18:24:49,601 - INFO - Ran assign_target_info on carton mwm_yso_cluster_boss
+2022-03-14 18:24:49,601 - INFO - wrote row to output csv for carton=mwm_yso_cluster_boss (79/150)
+2022-03-14 18:24:50,147 - INFO - Ran assign_target_info on carton mwm_yso_cmz_apogee
+2022-03-14 18:24:50,147 - INFO - wrote row to output csv for carton=mwm_yso_cmz_apogee (80/150)
+2022-03-14 18:24:51,068 - INFO - Ran assign_target_info on carton mwm_yso_disk_apogee
+2022-03-14 18:24:51,069 - INFO - wrote row to output csv for carton=mwm_yso_disk_apogee (81/150)
+2022-03-14 18:24:52,196 - INFO - Ran assign_target_info on carton mwm_yso_disk_boss
+2022-03-14 18:24:52,196 - INFO - wrote row to output csv for carton=mwm_yso_disk_boss (82/150)
+2022-03-14 18:24:52,696 - INFO - Ran assign_target_info on carton mwm_yso_embedded_apogee
+2022-03-14 18:24:52,696 - INFO - wrote row to output csv for carton=mwm_yso_embedded_apogee (83/150)
+2022-03-14 18:24:52,994 - INFO - Ran assign_target_info on carton mwm_yso_nebula_apogee
+2022-03-14 18:24:52,995 - INFO - wrote row to output csv for carton=mwm_yso_nebula_apogee (84/150)
+2022-03-14 18:24:53,463 - INFO - Ran assign_target_info on carton mwm_yso_ob_apogee
+2022-03-14 18:24:53,464 - INFO - wrote row to output csv for carton=mwm_yso_ob_apogee (85/150)
+2022-03-14 18:24:53,931 - INFO - Ran assign_target_info on carton mwm_yso_ob_boss
+2022-03-14 18:24:53,931 - INFO - wrote row to output csv for carton=mwm_yso_ob_boss (86/150)
+2022-03-14 18:24:55,966 - INFO - Ran assign_target_info on carton mwm_yso_pms_apogee
+2022-03-14 18:24:55,966 - INFO - wrote row to output csv for carton=mwm_yso_pms_apogee (87/150)
+2022-03-14 18:24:57,929 - INFO - Ran assign_target_info on carton mwm_yso_pms_boss
+2022-03-14 18:24:57,929 - INFO - wrote row to output csv for carton=mwm_yso_pms_boss (88/150)
+2022-03-14 18:24:59,408 - INFO - Ran assign_target_info on carton mwm_yso_variable_apogee
+2022-03-14 18:24:59,408 - INFO - wrote row to output csv for carton=mwm_yso_variable_apogee (89/150)
+2022-03-14 18:25:00,766 - INFO - Ran assign_target_info on carton mwm_yso_variable_boss
+2022-03-14 18:25:00,766 - INFO - wrote row to output csv for carton=mwm_yso_variable_boss (90/150)
+2022-03-14 18:25:01,066 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_10
+2022-03-14 18:25:01,066 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_10 (91/150)
+2022-03-14 18:25:03,634 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_1000
+2022-03-14 18:25:03,634 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_1000 (92/150)
+2022-03-14 18:25:05,757 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_1001a
+2022-03-14 18:25:05,758 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_1001a (93/150)
+2022-03-14 18:25:06,266 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_1001b
+2022-03-14 18:25:06,267 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_1001b (94/150)
+2022-03-14 18:25:07,387 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_11
+2022-03-14 18:25:07,387 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_11 (95/150)
+2022-03-14 18:25:08,423 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_12
+2022-03-14 18:25:08,423 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_12 (96/150)
+2022-03-14 18:25:08,930 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_14
+2022-03-14 18:25:08,931 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_14 (97/150)
+2022-03-14 18:25:13,307 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_15
+2022-03-14 18:25:13,307 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_15 (98/150)
+2022-03-14 18:25:14,320 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_17
+2022-03-14 18:25:14,320 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_17 (99/150)
+2022-03-14 18:25:14,802 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_18
+2022-03-14 18:25:14,802 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_18 (100/150)
+2022-03-14 18:25:20,222 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_19a
+2022-03-14 18:25:20,223 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_19a (101/150)
+2022-03-14 18:25:20,532 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_19b
+2022-03-14 18:25:20,548 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_19b (102/150)
+2022-03-14 18:25:20,855 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_19c
+2022-03-14 18:25:20,855 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_19c (103/150)
+2022-03-14 18:25:21,770 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_22
+2022-03-14 18:25:21,770 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_22 (104/150)
+2022-03-14 18:25:52,806 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_24
+2022-03-14 18:25:52,806 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_24 (105/150)
+2022-03-14 18:25:59,780 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_25
+2022-03-14 18:25:59,781 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_25 (106/150)
+2022-03-14 18:26:00,101 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_26
+2022-03-14 18:26:00,101 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_26 (107/150)
+2022-03-14 18:26:17,945 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_27
+2022-03-14 18:26:17,945 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_27 (108/150)
+2022-03-14 18:26:19,919 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_28a
+2022-03-14 18:26:19,919 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_28a (109/150)
+2022-03-14 18:26:21,324 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_28b
+2022-03-14 18:26:21,324 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_28b (110/150)
+2022-03-14 18:26:22,768 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_28c
+2022-03-14 18:26:22,768 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_28c (111/150)
+2022-03-14 18:26:25,500 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_29
+2022-03-14 18:26:25,500 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_29 (112/150)
+2022-03-14 18:26:26,557 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_3
+2022-03-14 18:26:26,557 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_3 (113/150)
+2022-03-14 18:26:26,838 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_30
+2022-03-14 18:26:26,838 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_30 (114/150)
+2022-03-14 18:26:28,536 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_31
+2022-03-14 18:26:28,536 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_31 (115/150)
+2022-03-14 18:26:29,560 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_32
+2022-03-14 18:26:29,560 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_32 (116/150)
+2022-03-14 18:26:30,315 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_33
+2022-03-14 18:26:30,315 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_33 (117/150)
+2022-03-14 18:29:54,170 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_34a
+2022-03-14 18:29:54,171 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_34a (118/150)
+2022-03-14 18:30:08,970 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_34b
+2022-03-14 18:30:08,971 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_34b (119/150)
+2022-03-14 18:30:17,219 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_35a
+2022-03-14 18:30:17,220 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_35a (120/150)
+2022-03-14 18:30:18,685 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_35b
+2022-03-14 18:30:18,685 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_35b (121/150)
+2022-03-14 18:30:19,126 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_35c
+2022-03-14 18:30:19,127 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_35c (122/150)
+2022-03-14 18:30:34,490 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_46
+2022-03-14 18:30:34,491 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_46 (123/150)
+2022-03-14 18:30:41,136 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_47a
+2022-03-14 18:30:41,136 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_47a (124/150)
+2022-03-14 18:30:42,027 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_47b
+2022-03-14 18:30:42,028 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_47b (125/150)
+2022-03-14 18:30:42,321 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_47c
+2022-03-14 18:30:42,321 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_47c (126/150)
+2022-03-14 18:30:42,615 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_47d
+2022-03-14 18:30:42,615 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_47d (127/150)
+2022-03-14 18:30:42,888 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_47e
+2022-03-14 18:30:42,888 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_47e (128/150)
+2022-03-14 18:30:44,047 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_5
+2022-03-14 18:30:44,047 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_5 (129/150)
+2022-03-14 18:30:45,472 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_6a
+2022-03-14 18:30:45,472 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_6a (130/150)
+2022-03-14 18:30:53,546 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_6b
+2022-03-14 18:30:53,546 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_6b (131/150)
+2022-03-14 18:31:14,050 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_6c
+2022-03-14 18:31:14,051 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_6c (132/150)
+2022-03-14 18:31:30,594 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_8
+2022-03-14 18:31:30,595 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_8 (133/150)
+2022-03-14 18:31:58,230 - INFO - Ran assign_target_info on carton openfibertargets_nov2020_9
+2022-03-14 18:31:58,230 - INFO - wrote row to output csv for carton=openfibertargets_nov2020_9 (134/150)
+2022-03-14 18:32:05,922 - INFO - Ran assign_target_info on carton ops_2mass_psc_brightneighbors
+2022-03-14 18:32:05,922 - INFO - wrote row to output csv for carton=ops_2mass_psc_brightneighbors (135/150)
+2022-03-14 18:34:36,654 - INFO - Ran assign_target_info on carton ops_gaia_brightneighbors
+2022-03-14 18:34:36,655 - INFO - wrote row to output csv for carton=ops_gaia_brightneighbors (136/150)
+2022-03-14 18:41:19,147 - INFO - Ran assign_target_info on carton ops_sky_apogee_best
+2022-03-14 18:41:19,148 - INFO - wrote row to output csv for carton=ops_sky_apogee_best (137/150)
+2022-03-14 18:41:25,648 - INFO - Ran assign_target_info on carton ops_sky_apogee_good
+2022-03-14 18:41:25,649 - INFO - wrote row to output csv for carton=ops_sky_apogee_good (138/150)
+2022-03-14 18:44:58,825 - INFO - Ran assign_target_info on carton ops_sky_boss_best
+2022-03-14 18:44:58,826 - INFO - wrote row to output csv for carton=ops_sky_boss_best (139/150)
+2022-03-14 18:51:23,840 - INFO - Ran assign_target_info on carton ops_sky_boss_good
+2022-03-14 18:51:23,840 - INFO - wrote row to output csv for carton=ops_sky_boss_good (140/150)
+2022-03-14 18:52:01,903 - INFO - Ran assign_target_info on carton ops_sky_boss_fallback
+2022-03-14 18:52:01,903 - INFO - wrote row to output csv for carton=ops_sky_boss_fallback (141/150)
+2022-03-14 18:52:22,086 - INFO - Ran assign_target_info on carton ops_std_apogee
+2022-03-14 18:52:22,086 - INFO - wrote row to output csv for carton=ops_std_apogee (142/150)
+2022-03-14 18:53:58,951 - INFO - Ran assign_target_info on carton ops_std_boss
+2022-03-14 18:53:58,951 - INFO - wrote row to output csv for carton=ops_std_boss (143/150)
+2022-03-14 18:56:35,221 - INFO - Ran assign_target_info on carton ops_std_boss_gdr2
+2022-03-14 18:56:35,222 - INFO - wrote row to output csv for carton=ops_std_boss_gdr2 (144/150)
+2022-03-14 18:56:51,760 - INFO - Ran assign_target_info on carton ops_std_boss_lsdr8
+2022-03-14 18:56:51,760 - INFO - wrote row to output csv for carton=ops_std_boss_lsdr8 (145/150)
+2022-03-14 18:59:05,439 - INFO - Ran assign_target_info on carton ops_std_boss_ps1dr2
+2022-03-14 18:59:05,439 - INFO - wrote row to output csv for carton=ops_std_boss_ps1dr2 (146/150)
+2022-03-14 18:59:09,019 - INFO - Ran assign_target_info on carton ops_std_boss_red
+2022-03-14 18:59:09,020 - INFO - wrote row to output csv for carton=ops_std_boss_red (147/150)
+2022-03-14 18:59:52,326 - INFO - Ran assign_target_info on carton ops_std_boss_tic
+2022-03-14 18:59:52,327 - INFO - wrote row to output csv for carton=ops_std_boss_tic (148/150)
+2022-03-14 19:00:01,704 - INFO - Ran assign_target_info on carton ops_std_eboss
+2022-03-14 19:00:01,705 - INFO - wrote row to output csv for carton=ops_std_eboss (149/150)
+2022-03-14 19:00:52,673 - INFO - Ran assign_target_info on carton ops_tycho2_brightneighbors
+2022-03-14 19:00:52,674 - INFO - wrote row to output csv for carton=ops_tycho2_brightneighbors (150/150)
+2022-03-14 19:00:52,674 - INFO - Saved output file=./files/rsconfig/Info_cartons-0.5.3_sets.csv
