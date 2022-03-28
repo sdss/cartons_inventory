@@ -39,7 +39,7 @@ In this section we will review examples for using all the aplications of the car
 
 ### 1 Creating an input file from a targetdb selection criteria
 
-To do this you have to use _origin_ ='targetdb', and _write\_input = True. Then you have to make sure the file with the output name doesnt exist or that _overwrite_=True
+To do this you have to use _origin_ ='targetdb', and _write\_input_ = True. Then you have to make sure the file with the output name doesnt exist or that _overwrite_=True
 Then you define a selection criteria with the arguments of _versions_, _forced\_versions_, _all\_cartons_, and _carton\_name\_pattern_.
 
 _all\_cartons_ = True means that we will search for all carton names while _all\_cartons_=False means that only cartons with a name matching _carton\_name\_pattern_ 
@@ -161,3 +161,73 @@ for cartons 'mwm\_halo\_bb\_boss' and 'mwm\_halo\_ms\_boss'. This is because ver
 from your input 'cartons-0.5.3' and replace it by the suggestions shown below pointing to exising versions of these cartons. For the moment _stage_ and _active_ are just 'N/A' becuase that information
 is not present in targetdb. And the 'diff' Pandas dataframe returned contains the basic information of the inexisting entries and the suggested carton/version/category combinations to use instead of the
 inexisting ones. The last column _in\_targetdb_ indicated whether the carton/version/category combination is found or not in targetdb.
+
+### Assign target dependent information for a group of cartons and return CartonInfo objects
+
+One of the main goals of the process_cartons method is to assign target dependent information for a group of cartons. These are parameters that may vary from target to target from the same
+carton, as opposed to carton dependent information which is shared by all the targets from the same carton and which is assigned at instantiation. The target dependend information is split in
+two groups and they can be calculated independently to save time for the user if it is interested in one but not the other. The first ones are python sets containing the different values found for
+the carton's _cadence\_pk_, _cadence\_label_, _mapper\_pk_, and _instrument\_label_, along with the minimum and maximum values of _value_, and _priority. To assign these attributes to the CartonInfo
+objects parameter one has to set _assign\_sets_=True.
+The other target dependent parameter that can be calculated are maGnitude placeholders used for each photometric system (SDSS, 2MASS, GAIA). The type of outliers are:
+None (For empty entries), Invalid (For Nan's and infinite values), and \{Number\} (For values brighter than -9, dimmer than 50, or equal to zero), in the latter cases the number itself is returned
+as the outlier type. To calculate magnitude outliers the user has to use _assign\_placeholders_=True.
+In the following block we show an example in which we assign both the target dependent sets/ranges and the magnitude placeholders for a custom list of mwm\_cb\_uvex cartons, called 'mwm\_uvex.txt'.
+In this case we also use _return\_objects_=True which in principle is optional but given that we are not saving the output .csv file (_write\_output_=False), is the only practical way to retrieve
+the information from these cartons.
+At the end of this example we see that 5 CartonInfo objects are returned, one for each carton, and that the first object corresponds to carton='mwm\_cb\_uvex1', which has as magnitude placeholders
+(values assigned to a given magnitude when photometry couldn't be obtained) 'Invalid' (Nan's of Inf's) for all three photometric systems, along with -9999.0 and None for TMASS.
+To properly visualize the content of a given CartonInfo object see the next usage example.
+```
+[u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
+Python 3.7.7 (default, Mar 26 2020, 15:48:22) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: objects=process_cartons(origin='custom', inputname='mwm_uvex.txt', assign_sets=True, assign_placeholders=True, return_objects=True)                                                                   
+[INFO]: ############################################################
+[INFO]: ###               STARTING CODE EXECUTION                ###
+[INFO]: ############################################################
+[INFO]: Ran process_cartons using the following arguments
+[INFO]: origin=custom
+[INFO]: files_folder=./files/
+[INFO]: inputname=mwm_uvex.txt
+[INFO]: delim=|
+[INFO]: check_exists=False
+[INFO]: verb=False
+[INFO]: return_objects=True
+[INFO]: write_input=False
+[INFO]: write_output=False
+[INFO]: assign_sets=True
+[INFO]: assign_placeholders=True
+[INFO]: visualize=False
+[INFO]: overwrite=False
+[INFO]: all_cartons=False
+[INFO]: cartons_name_pattern=None
+[INFO]: versions=latest
+[INFO]: forced_versions=None
+[INFO]: unique_version=None
+[INFO]:  
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex1
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex2
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex3
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex4
+[INFO]: Ran assign_target_info on carton mwm_cb_uvex5
+
+In [2]: objects                                                                                                                                                                                               
+Out[2]: 
+[<__main__.CartonInfo at 0x2af5d691ad50>,
+ <__main__.CartonInfo at 0x2af5d6401cd0>,
+ <__main__.CartonInfo at 0x2af5d68e5c90>,
+ <__main__.CartonInfo at 0x2af5d6795590>,
+ <__main__.CartonInfo at 0x2af5d6718e90>]
+
+In [3]: objects[0].carton,objects[0].magnitude_placeholders                                                                                                                                                   
+Out[3]: 
+('mwm_cb_uvex1',
+ {'GAIA_Invalid',
+  'SDSS_-9999.0',
+  'SDSS_Invalid',
+  'SDSS_None',
+  'TMASS_Invalid'})
+```

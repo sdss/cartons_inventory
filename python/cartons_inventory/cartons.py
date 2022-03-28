@@ -449,10 +449,10 @@ def check_mag_outliers(datafr, bands, systems):
 
 
 def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
-                    delim='|', check_exists=False, verb=True, return_objects=False,
+                    delim='|', check_exists=False, verb=False, return_objects=False,
                     write_input=False, write_output=False, assign_sets=False,
                     assign_placeholders=False, visualize=False, overwrite=False,
-                    all_cartons=True, cartons_name_pattern=None, versions='latest',
+                    all_cartons=False, cartons_name_pattern=None, versions='latest',
                     forced_versions=None, unique_version=None):
     """Get targetdb information for list of cartons or selection criteria and outputs .csv file.
 
@@ -608,7 +608,6 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
 
     if origin in ['rsconfig', 'custom']:
         cartons, plans, categories, stages, actives = gets_carton_info(inputread_filename)
-
     if origin == 'targetdb':
         if all_cartons is True:
             pattern = '%%'
@@ -700,8 +699,6 @@ def process_cartons(origin='rsconfig', files_folder='./files/', inputname=None,
         # First we instantiate the CartonInfo objects with the information we have
         obj = CartonInfo(cartons[index], plans[index], categories[index],
                          stages[index], actives[index])
-        objects.append(obj)
-
         # If check_exists we run check_existence on the cartons and return the diff dataframe
         if check_exists is True:
             output = None
