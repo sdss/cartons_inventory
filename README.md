@@ -529,4 +529,30 @@ In [1]: process_cartons(origin='custom', inputname='mwm_uvex.txt', assign_sets=T
 
 ### 5 Getting a dataframe with all the targets from a carton
 
+If we want the different parameters for all the targets from a carton and not just listing the different values found for that parameter in a carton,
+one can use the method _return\_target\_dataframe_ on a CartonInfo object corresponding to a specific carton. This method returns a Pandas DataFrame
+with multiple parameters and one entry for each target in the carton. For example in the following block we create the CartonInfo object for the
+'ops_apogee\_std' carton, and then we return the Pandas DataFrame corresponding to the targets in that carton. Once we have the DataFrame we can
+check information at the individual target level. For example, in here we calculate the average g-r and r-i colors for all the targets where gri
+magnitudes are available. If we want to analyze further the content of the carton we can save the DataFrame into a .csv file like here where we
+created file ['apogee\_standards\content.csv'](https://github.com/sdss/cartons_inventory/blob/main/python/cartons_inventory/files/custom/apogee_standards_content.csv).
+
+'''
+[u0955901@operations:cartons_inventory]$ ipython -i cartons.py 
+Python 3.7.7 (default, Mar 26 2020, 15:48:22) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: apogee_stds=CartonInfo('ops_std_apogee','0.5.0','standard_apogee')                                                                                                                                      
+
+In [2]: df = apogee_stds.return_target_dataframe()                                                                                                                                                              
+
+In [3]: ind_valid = df['g'].notnull() & df['r'].notnull() & df['i'].notnull()                                                                                                                                   
+
+In [4]: np.average((df['g']-df['r'])[ind_valid]), np.average((df['r']-df['i'])[ind_valid])                                                                                                                      
+Out[4]: (0.19343229220832064, 0.11288633405227849)
+
+In [5]: df.to_csv('./files/custom/apogee_stds_content.csv')
+'''
+
 ### 6 Saving the information from a group of cartons in a .csv file

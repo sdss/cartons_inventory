@@ -1,0 +1,52 @@
+2022-03-25 15:42:12,604 - INFO - ############################################################
+2022-03-25 15:42:12,605 - INFO - ###               STARTING CODE EXECUTION                ###
+2022-03-25 15:42:12,605 - INFO - ############################################################
+2022-03-25 15:42:12,605 - INFO - Ran process_cartons using the following arguments
+2022-03-25 15:42:12,605 - INFO - origin=targetdb
+2022-03-25 15:42:12,605 - INFO - files_folder=./files/
+2022-03-25 15:42:12,605 - INFO - inputname=None
+2022-03-25 15:42:12,605 - INFO - delim=|
+2022-03-25 15:42:12,605 - INFO - check_exists=False
+2022-03-25 15:42:12,605 - INFO - verb=True
+2022-03-25 15:42:12,605 - INFO - return_objects=False
+2022-03-25 15:42:12,605 - INFO - write_input=True
+2022-03-25 15:42:12,605 - INFO - write_output=False
+2022-03-25 15:42:12,605 - INFO - assign_sets=False
+2022-03-25 15:42:12,606 - INFO - assign_placeholders=False
+2022-03-25 15:42:12,606 - INFO - visualize=False
+2022-03-25 15:42:12,606 - INFO - overwrite=True
+2022-03-25 15:42:12,606 - INFO - all_cartons=False
+2022-03-25 15:42:12,606 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-25 15:42:12,606 - INFO - versions=single
+2022-03-25 15:42:12,606 - INFO - forced_versions={'bhm_rm_core': 83}
+2022-03-25 15:42:12,606 - INFO - unique_version=49
+2022-03-25 15:42:12,606 - INFO -  
+2022-03-25 15:42:12,609 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
+2022-03-25 15:42:12,610 - INFO - Ran assign_target_info on carton bhm_rm_ancillary
+2022-03-25 15:42:12,611 - INFO - Ran assign_target_info on carton bhm_rm_core
+2022-03-25 15:42:12,613 - INFO - Ran assign_target_info on carton bhm_rm_known-spec
+2022-03-25 15:42:12,614 - INFO - Ran assign_target_info on carton bhm_rm_var
+2022-03-25 15:44:54,015 - INFO - ############################################################
+2022-03-25 15:44:54,015 - INFO - ###               STARTING CODE EXECUTION                ###
+2022-03-25 15:44:54,016 - INFO - ############################################################
+2022-03-25 15:44:54,016 - INFO - Ran process_cartons using the following arguments
+2022-03-25 15:44:54,016 - INFO - origin=targetdb
+2022-03-25 15:44:54,016 - INFO - files_folder=./files/
+2022-03-25 15:44:54,016 - INFO - inputname=None
+2022-03-25 15:44:54,016 - INFO - delim=|
+2022-03-25 15:44:54,016 - INFO - check_exists=False
+2022-03-25 15:44:54,016 - INFO - verb=True
+2022-03-25 15:44:54,016 - INFO - return_objects=False
+2022-03-25 15:44:54,016 - INFO - write_input=True
+2022-03-25 15:44:54,016 - INFO - write_output=False
+2022-03-25 15:44:54,016 - INFO - assign_sets=False
+2022-03-25 15:44:54,016 - INFO - assign_placeholders=False
+2022-03-25 15:44:54,016 - INFO - visualize=False
+2022-03-25 15:44:54,016 - INFO - overwrite=True
+2022-03-25 15:44:54,017 - INFO - all_cartons=False
+2022-03-25 15:44:54,017 - INFO - cartons_name_pattern=bhm_rm*
+2022-03-25 15:44:54,017 - INFO - versions=single
+2022-03-25 15:44:54,017 - INFO - forced_versions={'bhm_rm_core': 83}
+2022-03-25 15:44:54,017 - INFO - unique_version=49
+2022-03-25 15:44:54,017 - INFO -  
+2022-03-25 15:44:54,019 - INFO - Wrote file ./files/targetdb/Cartons_sample_Versions_single_and_forced.txt
