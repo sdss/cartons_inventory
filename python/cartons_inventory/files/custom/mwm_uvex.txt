@@ -1,0 +1,6 @@
+|                                   carton |   plan |             category | stage | active |
+|                             mwm_cb_uvex1 |  0.5.0 |              science |   srd |      y |
+|                             mwm_cb_uvex2 |  0.5.0 |              science |   srd |      y |
+|                             mwm_cb_uvex3 |  0.5.0 |              science |   srd |      y |
+|                             mwm_cb_uvex4 |  0.5.0 |              science |   srd |      y |
+|                             mwm_cb_uvex5 |  0.5.0 |              science |   srd |      y |

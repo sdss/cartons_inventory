@@ -162,7 +162,7 @@ from your input 'cartons-0.5.3' and replace it by the suggestions shown below po
 is not present in targetdb. And the 'diff' Pandas dataframe returned contains the basic information of the inexisting entries and the suggested carton/version/category combinations to use instead of the
 inexisting ones. The last column _in\_targetdb_ indicated whether the carton/version/category combination is found or not in targetdb.
 
-### Assign target dependent information for a group of cartons and return CartonInfo objects
+### 3 Assign target dependent information for a group of cartons and return CartonInfo objects
 
 One of the main goals of the process_cartons method is to assign target dependent information for a group of cartons. These are parameters that may vary from target to target from the same
 carton, as opposed to carton dependent information which is shared by all the targets from the same carton and which is assigned at instantiation. The target dependend information is split in
