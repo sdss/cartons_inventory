@@ -603,6 +603,6 @@ In [1]: process_cartons(origin='rsconfig',inputname='cartons-0.5.3.txt',write_ou
 [INFO]: wrote row to output csv for carton=ops_std_eboss (149/150)
 [INFO]: Ran assign_target_info on ops_tycho2_brightneighbors
 [INFO]: wrote row to output csv for carton=ops_tycho2_brightneighbors (150/150)
-[INFO]: Wrote file ./files/rsconfig/Info_cartons-0.5.3_sets.csv
+[INFO]: Saved output file ./files/rsconfig/Info_cartons-0.5.3_sets.csv
 ```
 
