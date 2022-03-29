@@ -18,6 +18,9 @@ the same carton). These parameters can be sets/ranges describing all the differe
 for cadence_pk, cadence_label, lambda_eff, instrument_pk, and instrument label along with the
 minimum and maximum values of priority and value, or it can be the magnitude placeholders used
 for each photometric system in that carton to indicate photometry was not valid for a given band.
+Given that there are some arguments in process_cartons that are incompatible with others
+(which will be indicated with an assertion error) for simplicity all the default arguments
+of process_cartons are False and None when applicable.
 
 This code can be used to create an input file acceptable by process_cartons from a targetdb query,
 check the existence of a list of cartons, assign target dependent information for a group of
